@@ -340,6 +340,7 @@
     /* Adjust padding for team-container on mobile */
     .team-container {
         padding: 30px 10px; /* Adjust padding for smaller screens */
+        margin: 0 !important; /* Remove any margin from the team container */
     }
 
     .team-container-fluid {
@@ -358,6 +359,7 @@
         justify-content: center; /* Center the content horizontally */
         align-items: center; /* Center content vertically */
         margin-bottom: 20px; /* Add consistent spacing between columns */
+        padding: 0 !important; /* Remove padding */
     }
 
     /* Ensure no horizontal scrolling */
@@ -372,11 +374,14 @@
         box-sizing: border-box;  /* Include padding and border in element's width and height */
     }
 
-    /* Adjust any element that might overflow the viewport */
-    .container, .row, .team-container, .navbar, .team-member .team-member0 .team-member1 {
+    /* Remove margins from all containers and rows */
+    .container, .container-fluid, .row, .team-container, .navbar, .team-member .team-member0 .team-member1{
+        margin: 0 !important;  /* Remove any margin */
+        padding: 0 !important;  /* Remove any padding */
         width: 100%;  /* Ensure elements don't exceed the viewport width */
         overflow-x: hidden;  /* Prevent overflow in specific containers */
-    }}
+    }
+}
 
     </style>
 
