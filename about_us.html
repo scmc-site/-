@@ -39,6 +39,7 @@
         height: 100px;  /* Height of the navbar */
         width: auto;    /* Auto width to fit content */
         background-color: #FFCC00;  /* Background color */
+        z-index: 5;
     }
 
     /* Custom background for specific elements */
@@ -153,11 +154,6 @@
     object-fit: cover; /* Ensure the image maintains its aspect ratio */
     width: 100%;        /* Ensure the image takes up the full width of the container */
     height: 100%;       /* Ensure the image takes up the full height of the container */
-    }
-
-    /* Prevent horizontal scroll by hiding any overflow */
-    body {
-    overflow-x: hidden; /* Prevents horizontal scrolling */
     }
 
     .team-member {
@@ -312,7 +308,6 @@
         flex-direction: column; /* Stack items vertically */
         align-items: center; /* Center horizontally */
         justify-content: center; /* Center vertically */
-        margin: 0 !important; /* Remove any margin */
     }
 
     /* Ensure team members have no margin or padding */
@@ -340,7 +335,6 @@
     /* Adjust padding for team-container on mobile */
     .team-container {
         padding: 30px 10px; /* Adjust padding for smaller screens */
-        margin: 0 !important; /* Remove any margin from the team container */
     }
 
     .team-container-fluid {
@@ -363,15 +357,11 @@
     }
 
     /* Ensure no horizontal scrolling */
-    body, html {
-        overflow-x: hidden;  /* Disable horizontal scrolling */
-        margin: 0;  /* Remove default body margin */
-        padding: 0;  /* Remove default body padding */
-    }
-
-    /* Prevent any element from causing horizontal overflow */
-    * {
-        box-sizing: border-box;  /* Include padding and border in element's width and height */
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      overflow-x: hidden;  /* Prevent horizontal scrolling */
     }
 
     /* Remove margins from all containers and rows */
@@ -379,7 +369,6 @@
         margin: 0 !important;  /* Remove any margin */
         padding: 0 !important;  /* Remove any padding */
         width: 100%;  /* Ensure elements don't exceed the viewport width */
-        overflow-x: hidden;  /* Prevent overflow in specific containers */
     }
 
     .custom-red {
