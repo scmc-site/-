@@ -261,8 +261,8 @@
     padding: 100px;
     }
 
-    /* Mobile View - For screens smaller than 990px */
-    @media (max-width: 990px) {
+   /* Mobile View - For screens smaller than 990px */
+@media (max-width: 990px) {
     /* Change the background color of the navbar on smaller screens */
     #navbarNav {
         background-color: #FFCC00;  /* Set navbar background to yellow */
@@ -290,8 +290,8 @@
     }
 
     .d-flex {
-    flex-direction: column; /* Stack h1 and p vertically */
-    align-items: flex-start; /* Align text to the start (optional) */
+        flex-direction: column; /* Stack h1 and p vertically */
+        align-items: flex-start; /* Align text to the start (optional) */
     }
 
     h1 {
@@ -359,7 +359,24 @@
         align-items: center; /* Center content vertically */
         margin-bottom: 20px; /* Add consistent spacing between columns */
     }
-}
+
+    /* Ensure no horizontal scrolling */
+    body, html {
+        overflow-x: hidden;  /* Disable horizontal scrolling */
+        margin: 0;  /* Remove default body margin */
+        padding: 0;  /* Remove default body padding */
+    }
+
+    /* Prevent any element from causing horizontal overflow */
+    * {
+        box-sizing: border-box;  /* Include padding and border in element's width and height */
+    }
+
+    /* Adjust any element that might overflow the viewport */
+    .container, .row, .team-container, .navbar, .team-member .team-member0 .team-member1 {
+        width: 100%;  /* Ensure elements don't exceed the viewport width */
+        overflow-x: hidden;  /* Prevent overflow in specific containers */
+    }}
 
     </style>
 
