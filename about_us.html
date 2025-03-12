@@ -324,7 +324,7 @@
     }
 
     /* Specific margin adjustment for team-member0 and team-member1 */
-    .team-member0 {
+    .team-member0, .team-member1 {
         margin-bottom: 20px !important; /* Space between team-member0 and team-member1 */
     }
 
@@ -375,13 +375,16 @@
     }
 
     /* Remove margins from all containers and rows */
-    .container, .container-fluid, .row, .team-container, .navbar, .team-member .team-member0 .team-member1{
+    .container, .container-fluid, .row, .team-container, .navbar, .team-member .team-member0 .team-member1 {
         margin: 0 !important;  /* Remove any margin */
         padding: 0 !important;  /* Remove any padding */
         width: 100%;  /* Ensure elements don't exceed the viewport width */
         overflow-x: hidden;  /* Prevent overflow in specific containers */
     }
-}
+
+    .custom-red {
+      margin-top: 50px;  /* Adjust this value to the desired top margin */
+    }}
 
     </style>
 
