@@ -136,7 +136,130 @@
         font-size: 2.5rem; /* Increase font size for the toggler icon */
     }
 
+    h1 {
+      font-family: 'Pixelify Sans';
+      font-size: 70px;
+    }
 
+    p {
+     font-family: 'Pixelify Sans';
+     font-size: 18px;
+     margin: 15px;
+     padding-bottom: 20px;
+    }
+
+    /* Prevent the image from being stretched */
+    .custom-img {
+    object-fit: cover; /* Ensure the image maintains its aspect ratio */
+    width: 100%;        /* Ensure the image takes up the full width of the container */
+    height: 100%;       /* Ensure the image takes up the full height of the container */
+    }
+
+    /* Prevent horizontal scroll by hiding any overflow */
+    body {
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+    }
+
+    .team-member {
+    width: 330px;
+    height: 380px;
+    background: #FFCC00; /* Yellow Background */
+    border-radius: 20px; /* Rounded Corners */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: hidden;
+    position: relative;
+    margin: 50px; /* Add bottom padding for gap */
+    }
+
+    .team-member0 {
+    width: 330px;
+    height: 380px;
+    background: #FFCC00; /* Yellow Background */
+    border-radius: 20px; /* Rounded Corners */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: hidden;
+    position: relative;
+    margin-top: 50px;
+    margin-bottom: -10px; /* Add bottom padding for gap */
+    margin-left: 175px !important;
+    }
+
+    .team-member1 {
+    width: 330px;
+    height: 380px;
+    background: #FFCC00; /* Yellow Background */
+    border-radius: 20px; /* Rounded Corners */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: hidden;
+    position: relative;
+    margin-top: 50px;
+    margin-bottom: -10px; /* Add bottom padding for gap */
+    margin-right: 175px !important;
+    }
+
+    .profile-pic {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+    .profile-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image fills the space */
+    border-radius: 20px 20px 0 0; /* Round top corners */
+    }
+
+    .details {
+    background: #9B0300; /* Deep Red */
+    color: #FFF; /* White Text */
+    font-family: 'Pixelify Sans', sans-serif; /* Pixelated Font */
+    text-transform: uppercase; /* Uppercase for all text */
+    padding: 10px;
+    border-radius: 0 0 20px 20px; /* Round bottom corners */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    }
+
+    .details .name {
+    font-size: 20px;
+    flex: 1 1 100%;
+    }
+
+    .details .pronouns,
+    .details .title {
+    font-size: 16px;
+    flex: 1 1 50%;
+    }
+
+    .title {
+    text-align: right;
+    }
+
+    .custom-red {
+    color: #9B0300; /* Replace this with your desired shade of red */
+    }
+
+    /* Set background color and padding */
+    .team-container-fluid {
+    margin-left: 100px;
+    margin-right: 100px;
+    }
+
+    .team-container {
+    color:#FFCC00;
+    padding: 100px;
+    }
 
     /* Mobile View - For screens smaller than 990px */
     @media (max-width: 990px) {
@@ -164,7 +287,79 @@
     /* Hover effect for navigation links (scaling on hover) */
     .navbar-nav .nav-link:hover {
         transform: none;
-    }}
+    }
+
+    .d-flex {
+    flex-direction: column; /* Stack h1 and p vertically */
+    align-items: flex-start; /* Align text to the start (optional) */
+    }
+
+    h1 {
+        font-size: 40px; /* Reduce font size for smaller screens */
+        text-align: center; /* Center-align the text for better layout */
+    }
+
+    p {
+        font-size: 16px; /* Slightly reduce font size */
+        margin: 10px 0; /* Adjust margins for better spacing */
+        padding-bottom: 15px; /* Reduce padding to fit content neatly */
+        text-align: center; /* Center-align paragraph text for consistency */
+    }
+
+    /* Stack all team members in a single column */
+    .team-container .row {
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center horizontally */
+        justify-content: center; /* Center vertically */
+        margin: 0 !important; /* Remove any margin */
+    }
+
+    /* Ensure team members have no margin or padding */
+    .team-member, .team-member0, .team-member1 {
+        width: 280px;
+        height: 320px;
+        margin: 10px 0 !important; /* Add margin between items */
+        padding: 0 !important; /* No padding */
+    }
+
+    /* Specific margin adjustment for team-member0 and team-member1 */
+    .team-member0 {
+        margin-bottom: 20px !important; /* Space between team-member0 and team-member1 */
+    }
+
+    /* Adjust font size for smaller screens */
+    .details .name {
+        font-size: 14px;
+    }
+
+    .details .pronouns, .details .title {
+        font-size: 15px;
+    }
+
+    /* Adjust padding for team-container on mobile */
+    .team-container {
+        padding: 30px 10px; /* Adjust padding for smaller screens */
+    }
+
+    .team-container-fluid {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    /* Ensure columns are full width and centered on mobile */
+    .team-container .col-12, 
+    .team-container .col-lg-6, 
+    .team-container .col-md-6, 
+    .team-container .col-lg-4, 
+    .team-container .col-md-4 {
+        flex: 1 1 100%; /* Make columns full width */
+        display: flex;
+        justify-content: center; /* Center the content horizontally */
+        align-items: center; /* Center content vertically */
+        margin-bottom: 20px; /* Add consistent spacing between columns */
+    }
+}
 
     </style>
 
@@ -220,6 +415,157 @@
     </div>
 </nav>
 
+
+
+<div class="container-fluid p-0">
+
+    <div class="row no-gutters">
+        <!-- Full-screen Image Section on Left -->
+        <div class="col-lg-6 p-0">
+          <div class="contact-img">
+            <img src="placeholder2.png" alt="Image 1" class="img-fluid custom-img">
+          </div>
+        </div>
+      
+        <!-- Text Section on Right with More Margin -->
+        <div class="col-lg-6 d-flex flex-column justify-content-center p-5">
+          <div class="d-flex align-items-center">
+            <h1 class="text-left mb-4 me-3">WHO WE ARE</h1>
+            <p>We’re a group of manga fans from Southern California who love reading, sharing, and talking about manga. 
+                Whether you're new to manga or have been a fan for years, you'll feel at home here.
+                We enjoy discovering new series, giving recommendations, and discussing our favorite stories. 
+                We also plan fun outdoor events, meet-ups, and trips to conventions. Our goal is to create a 
+                friendly space where everyone can connect, learn, and have fun together!</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="row no-gutters">
+        <!-- Text Section on Left with More Margin (for second row) -->
+        <div class="col-lg-6 d-flex flex-column justify-content-center p-5">
+          <div class="d-flex align-items-center">
+            <h1 class="text-left mb-4 me-3">WHAT BUILT US</h1>
+            <p>We came together because of our shared love for manga and anime. 
+                What started as a small group of friends has grown into a welcoming community. 
+                Our club is built on friendship, respect, and fun, where everyone can share their 
+                love for manga and feel like family. We believe in creating a place where all fans 
+                can connect and enjoy the things they love.</p>
+          </div>
+        </div>
+      
+        <!-- Full-screen Image Section on Right -->
+        <div class="col-lg-6 p-0">
+          <div class="contact-img">
+            <img src="placeholder3.png" alt="Image 2" class="img-fluid custom-img">
+          </div>
+        </div>
+      </div>
+      
+      <div class="row no-gutters">
+        <!-- Full-screen Image Section on Left -->
+        <div class="col-lg-6 p-0">
+          <div class="contact-img">
+            <img src="placeholder4.png" alt="Image 3" class="img-fluid custom-img">
+          </div>
+        </div>
+      
+        <!-- Text Section on Right with More Margin -->
+        <div class="col-lg-6 d-flex flex-column justify-content-center p-5">
+          <div class="d-flex align-items-center">
+            <h1 class="text-left mb-4 me-3">WHAT WE VALUE</h1>
+            <p>We value friendship, respect, and welcoming everyone. 
+                No matter how much you know about manga, you’re always welcome here. 
+                We believe in creating a supportive space where people can share ideas, 
+                learn from each other, and enjoy manga together. Most importantly, 
+                we value having fun and making sure everyone feels at home.</p>
+          </div>
+        </div>
+      </div></div></div></div>
+    
+
+
+      <div class="team-container" style="background-color: #FFCC00;"> <!-- Add background color here -->
+        <div class="team-container-fluid p-0"> <!-- Set no padding here -->
+          <div class="row">
+            <div class="col-12 text-center p-4">
+              <h1 class="text-start custom-red">Meet the Team</h1>
+            </div>
+          </div>
+      
+          <!-- First Row with 2 Team Members (Side by side, closer side gap) -->
+          <div class="row g-0"> <!-- g-0 for no gap between columns -->
+            <div class="col-lg-6 col-md-6 col-sm-12 d-flex flex-column align-items-center">
+              <div class="team-member0">
+                <div class="profile-pic">
+                  <img src="team_0.jpg" alt="Team Member 1" />
+                </div>
+                <div class="details">
+                  <span class="name">ALEX</span>
+                  <span class="pronouns">He/Him</span>
+                  <span class="title">Operations Lead</span>
+                </div>
+              </div>
+            </div>
+      
+            <div class="col-lg-6 col-md-6 col-sm-12 d-flex flex-column align-items-center">
+              <div class="team-member1">
+                <div class="profile-pic">
+                  <img src="team_1.png" alt="Team Member 2" />
+                </div>
+                <div class="details">
+                  <span class="name">ROSS</span>
+                  <span class="pronouns">He/Him</span>
+                  <span class="title">Event Coordinator</span>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Second Row with 3 Team Members (Below first row) -->
+          <div class="row second-row g-3"> <!-- g-3 for a standard gap between columns -->
+            <div class="col-lg-4 col-md-4 col-sm-12 d-flex flex-column align-items-center">
+              <div class="team-member">
+                <div class="profile-pic">
+                  <img src="team_2.jpg" alt="Team Member 3" />
+                </div>
+                <div class="details">
+                  <span class="name">NPC</span>
+                  <span class="pronouns">He/Him</span>
+                  <span class="title">Event Coordinator</span>
+                </div>
+              </div>
+            </div>
+      
+            <div class="col-lg-4 col-md-4 col-sm-12 d-flex flex-column align-items-center">
+              <div class="team-member">
+                <div class="profile-pic">
+                  <img src="team_4.jpg" alt="Team Member 4" />
+                </div>
+                <div class="details">
+                  <span class="name">EMERALD</span>
+                  <span class="pronouns">She/Her</span>
+                  <span class="title">Design Coordinator</span>
+                </div>
+              </div>
+            </div>
+      
+            <div class="col-lg-4 col-md-4 col-sm-12 d-flex flex-column align-items-center">
+              <div class="team-member">
+                <div class="profile-pic">
+                  <img src="team_3.jpg" alt="Team Member 5" />
+                </div>
+                <div class="details">
+                  <span class="name">BANCAKES</span>
+                  <span class="pronouns">She/Her</span>
+                  <span class="title">Art Lead</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+  
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
