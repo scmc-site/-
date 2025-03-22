@@ -140,13 +140,22 @@
         margin: 0;
         padding: 0;
         height: 100%;
-        overflow: hidden; /* Prevent scrolling */
     }
 
     iframe {
         width: 100%;
         height: 100%;
         border: none;
+    }
+
+    footer {
+      color: #070603;
+      font-size: 14px; /* Font size 14px */
+      font-family: 'Pixelify Sans';
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 30px;
+      padding-bottom: 30px;
     }
 
     /* Mobile View - For screens smaller than 990px */
@@ -223,9 +232,10 @@
 
             <!-- Join Us Button (inside the collapsed navbar) -->
             <div class="d-flex justify-content-center justify-content-lg-end">
+                <a href="https://discord.gg/vwg9rMtNT8">                  
                 <button class="btn d-flex align-items-center justify-content-center" id="joinBtn">
                     <img src="join_us_button.svg" alt="Join Us" id="svgIcon">
-                </button>
+                </button></a>
             </div>
         </div>
     </div>
@@ -235,6 +245,11 @@
     <iframe src="https://calendar.google.com/calendar/embed?src=socalmangaclub%40gmail.com&ctz=America%2FLos_Angeles" 
     frameborder="0" scrolling="no">
     </iframe>
+
+    <footer class="text-center">
+        <p>&copy; 2025 SoCal Manga Club. Designed and developed by Emerald. All rights reserved.</p>
+    </footer>
+    
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     
