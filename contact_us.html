@@ -186,7 +186,7 @@
       padding: 40px;         /* Internal padding for the form */
       box-sizing: border-box;/* Include padding in height/width */
       border-radius: 10px;   /* Rounded corners for the form */
-      max-width: 500px;      /* Set a maximum width for larger screens */
+      max-width: 600px; /* Adjust the form width as needed */      
       width: 100%;           /* Take full width on smaller screens */
       margin: 0 auto;        /* Center the form horizontally */
     }
@@ -202,6 +202,19 @@
     .fs-button:hover {
       background-color: #9B0300; /* Darker color text on hover */
       color: #FFCC00;
+    }
+
+    .social-icons {
+    position: absolute;
+    top: 750px; /* Adjust as needed */
+    left: 100px; /* Adjust as needed */
+    display: flex; /* Make the icons horizontal */
+    gap: 10px; /* Adjust the gap between icons */
+    }
+
+    .social-icon {
+    width: 40px; /* Adjust icon size as needed */
+    height: 40px; /* Optional, to ensure uniform size */
     }
 
     footer {
@@ -273,7 +286,19 @@
       .fs-label {
         font-size: 16px;
         margin-bottom: 5px;
-      }}
+      }
+    
+      .social-icons {
+        top: 450px; /* Adjust the top position for mobile */
+        left: 0px; /* Move icons closer to the left edge */
+        justify-content: center; /* Center the icons */
+        width: 100%; /* Allow icons to take the full width */
+    }
+
+    .social-icon {
+        width: 30px; /* Smaller icons on mobile */
+        height: 30px; /* Smaller icons on mobile */
+    }}
     </style>
 
 </head>
@@ -332,34 +357,46 @@
 <div class="container-fluid p-0">
     <div class="row no-gutters">
       <!-- Full-screen Image Section -->
-      <div class="col-lg-6 p-0">
+      <div class="col-lg-6 p-0 position-relative">
         <div class="contact-img">
-          <img src="placeholder1.png" alt="Contact Image">
+          <img src="placeholder1.png" alt="Contact Image" class="img-fluid">
+          
+          <!-- Social Media Icons -->
+          <div class="social-icons">
+            <a href="https://www.eventbrite.com/o/socal-manga-club-85685387313" target="_blank">
+              <img src="EventBrite.svg" alt="Facebook" class="social-icon">
+            </a>
+            <a href="https://www.instagram.com/socalmangaclub/" target="_blank">
+              <img src="IG.svg" alt="Twitter" class="social-icon">
+            </a>
+          </div>
         </div>
       </div>
-
-<!-- Full-screen Contact Form Section -->
-<div class="col-lg-6 d-flex align-items-center justify-content-center">
+  
+      <!-- Full-screen Contact Form Section -->
+      <div class="col-lg-6 d-flex align-items-center justify-content-center p-5">
     <form action="https://formspree.io/f/mqapprez" class="fs-form custom-font" target="_top" method="POST">
         <h1 class="text-left mb-4">Contact Us</h1>
         <p>Have questions? Reach out via email or social media. We’d love to hear from you!</p>
 
         <div class="fs-field mb-4">
-            <label class="fs-label form-label" for="name">Name</label>
-            <input class="fs-input form-control" id="name" name="name" placeholder="Your Name" required />
+          <label class="fs-label form-label" for="name">Name</label>
+          <input class="fs-input form-control" id="name" name="name" placeholder="Your Name" required />
         </div>
         <div class="fs-field mb-4">
-            <label class="fs-label form-label" for="email">Email address</label>
-            <input class="fs-input form-control" id="email" name="email" type="email" placeholder="Your Email" required />
+          <label class="fs-label form-label" for="email">Email address</label>
+          <input class="fs-input form-control" id="email" name="email" type="email" placeholder="Your Email" required />
         </div>
         <div class="fs-field mb-4">
-            <label class="fs-label form-label" for="message">Message</label>
-            <textarea class="fs-textarea form-control" id="message" name="message" rows="4" placeholder="How can we help?" required></textarea>
+          <label class="fs-label form-label" for="message">Message</label>
+          <textarea class="fs-textarea form-control" id="message" name="message" rows="4" placeholder="How can we help?" required></textarea>
         </div>
         <div class="fs-button-group d-flex justify-content-center">
-            <button class="fs-button btn btn-custom" type="submit">Send</button>
+          <button class="fs-button btn btn-custom" type="submit">Send</button>
         </div>
-    </form>
+      </form>
+    </div>
+  </div>
 </div>
 
 <footer class="text-center">
