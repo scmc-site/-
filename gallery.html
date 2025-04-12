@@ -284,6 +284,29 @@
       padding-top: 30px;
     }
 
+    .gallery-navigation {
+    text-align: center;
+    margin: 10px 0;
+}
+
+#prev-btn, #next-btn {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    border: none;
+    font-family: 'Pixelify Sans';
+    background-color: #ffc300;
+    color: #070603;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#prev-btn:disabled, #next-btn:disabled {
+    background-color: #fbe5a1;
+    cursor: not-allowed;
+}
+
+
     /* Mobile View - For screens smaller than 990px */
     @media (max-width: 990px) {
     /* Change the background color of the navbar on smaller screens */
@@ -407,27 +430,262 @@
 </nav>
 
 
-<div class="gallery-container"> <!-- This is the wrapper div added -->
-    <!-- Filter bar -->
-    <div class="filter-bar">
+<div class="gallery-container"> 
+  <!-- Filter bar -->
+  <div class="filter-bar">
       <div class="filters">
-        <button class="filter-btn active" data-filter="all">Best Of</button>
-        <button class="filter-btn" data-filter="category1">Club Meetings</button>
-        <button class="filter-btn" data-filter="category2">Just For Fun</button>
-        <button class="filter-btn" data-filter="category3">Videos</button>
+          <button class="filter-btn active" data-filter="all">Best Of</button>
+          <button class="filter-btn" data-filter="category1">Club Meetings</button>
+          <button class="filter-btn" data-filter="category2">Just For Fun</button>
       </div>
       <div class="sort">
-        <label for="sort">Sort By:</label>
-        <select id="sort">
-          <option value="newest">Newest</option>
-          <option value="oldest">Oldest</option>
-          <option value="popular">Most Popular</option>
-        </select>
+          <label for="sort">Sort By:</label>
+          <select id="sort">
+              <option value="newest">Newest</option>
+              <option value="oldest">Oldest</option>
+              <option value="popular">Most Popular</option>
+          </select>
       </div>
-    </div>
+  </div>
     
     <div class="content">
         <!-- Gallery item example with category data attributes -->
+        <div class="item" data-category="category1" data-popularity="85" data-date="2024-01">
+          <div class="gallery-item">
+              <img src="category1/img1.jpg" alt="Image">
+          </div>
+      </div>
+      
+      <div class="item" data-category="category1" data-popularity="60" data-date="2024-02">
+          <div class="gallery-item">
+              <img src="category1/img2.jpg" alt="Image">
+          </div>
+      </div>
+      
+      <div class="item" data-category="category1" data-popularity="75" data-date="2024-03">
+          <div class="gallery-item">
+              <img src="category1/img3.jpg" alt="Image">
+          </div>
+      </div>
+      
+      <div class="item" data-category="category1" data-popularity="47" data-date="2024-05">
+          <div class="gallery-item">
+              <img src="category1/img4.jpg" alt="Image">
+          </div>
+      </div>
+      
+      <div class="item" data-category="category1" data-popularity="92" data-date="2024-04">
+          <div class="gallery-item">
+              <img src="category1/img5.jpg" alt="Image">
+          </div>
+      </div>
+      
+      <div class="item" data-category="category1" data-popularity="63" data-date="2024-09">
+          <div class="gallery-item">
+              <img src="category1/img6.jpg" alt="Image">
+          </div>
+      </div>
+      
+      <div class="item" data-category="category1" data-popularity="78" data-date="2024-01">
+          <div class="gallery-item">
+              <img src="category1/img7.jpg" alt="Image">
+          </div>
+      </div>
+      
+      <div class="item" data-category="category1" data-popularity="66" data-date="2024-07">
+          <div class="gallery-item">
+              <img src="category1/img8.jpg" alt="Image">
+          </div>
+      </div>
+      
+      <div class="item" data-category="category1" data-popularity="66" data-date="2024-02">
+          <div class="gallery-item">
+              <img src="category1/img9.jpg" alt="Image">
+          </div>
+      </div>
+      
+      <div class="item" data-category="category1" data-popularity="81" data-date="2024-03">
+          <div class="gallery-item">
+              <img src="category1/img10.jpg" alt="Image">
+          </div>
+      </div>
+      
+      <div class="item" data-category="category1" data-popularity="81" data-date="2024-07">
+          <div class="gallery-item">
+              <img src="category1/img11.jpg" alt="Image">
+          </div>
+      </div>
+      
+      <div class="item" data-category="category1" data-popularity="90" data-date="2024-08">
+          <div class="gallery-item">
+              <img src="category1/img12.jpg" alt="Image">
+          </div>
+      </div>
+      
+      <div class="item" data-category="category1" data-popularity="55" data-date="2024-10">
+          <div class="gallery-item">
+              <img src="category1/img13.jpg" alt="Image">
+          </div>
+      </div>
+      
+      <div class="item" data-category="category1" data-popularity="95" data-date="2024-11">
+          <div class="gallery-item">
+              <img src="category1/img14.jpg" alt="Image">
+          </div>
+      </div>
+      
+      <div class="item" data-category="category1" data-popularity="72" data-date="2024-12">
+          <div class="gallery-item">
+              <img src="category1/img15.jpg" alt="Image">
+          </div>
+      </div>
+      
+      <div class="item" data-category="category1" data-popularity="60" data-date="2024-01">
+          <div class="gallery-item">
+              <img src="category1/img16.jpg" alt="Image">
+          </div>
+      </div>
+      
+      <div class="item" data-category="category1" data-popularity="88" data-date="2024-02">
+          <div class="gallery-item">
+              <img src="category1/img17.jpg" alt="Image">
+          </div>
+      </div>
+      
+      <div class="item" data-category="category1" data-popularity="70" data-date="2024-03">
+          <div class="gallery-item">
+              <img src="category1/img18.jpg" alt="Image">
+          </div>
+      </div>
+      
+      <div class="item" data-category="category1" data-popularity="80" data-date="2024-04">
+          <div class="gallery-item">
+              <img src="category1/img19.jpg" alt="Image">
+          </div>
+      </div>
+      
+      <div class="item" data-category="category1" data-popularity="65" data-date="2024-05">
+          <div class="gallery-item">
+              <img src="category1/img20.jpg" alt="Image">
+          </div>
+      </div>
+      
+      <div class="item" data-category="category1" data-popularity="75" data-date="2024-06">
+          <div class="gallery-item">
+              <img src="category1/img21.jpg" alt="Image">
+          </div>
+      </div>
+      
+      <div class="item" data-category="category1" data-popularity="63" data-date="2024-07">
+          <div class="gallery-item">
+              <img src="category1/img22.jpg" alt="Image">
+          </div>
+      </div>
+      
+      <div class="item" data-category="category1" data-popularity="82" data-date="2024-08">
+          <div class="gallery-item">
+              <img src="category1/img23.jpg" alt="Image">
+          </div>
+      </div>
+      
+      <div class="item" data-category="category1" data-popularity="69" data-date="2024-09">
+          <div class="gallery-item">
+              <img src="category1/img24.jpg" alt="Image">
+          </div>
+      </div>
+      
+      <div class="item" data-category="category1" data-popularity="91" data-date="2024-10">
+          <div class="gallery-item">
+              <img src="category1/img25.jpg" alt="Image">
+          </div>
+      </div>
+      
+      <div class="item" data-category="category1" data-popularity="57" data-date="2024-11">
+          <div class="gallery-item">
+              <img src="category1/img26.jpg" alt="Image">
+          </div>
+      </div>
+      
+      <div class="item" data-category="category1" data-popularity="78" data-date="2024-12">
+          <div class="gallery-item">
+              <img src="category1/img27.jpg" alt="Image">
+          </div>
+      </div>
+      
+      <div class="item" data-category="category1" data-popularity="64" data-date="2024-01">
+          <div class="gallery-item">
+              <img src="category1/img28.jpg" alt="Image">
+          </div>
+      </div>
+      
+      <div class="item" data-category="category1" data-popularity="83" data-date="2024-02">
+          <div class="gallery-item">
+              <img src="category1/img29.jpg" alt="Image">
+          </div>
+      </div>
+      
+      <div class="item" data-category="category1" data-popularity="88" data-date="2024-03">
+          <div class="gallery-item">
+              <img src="category1/img30.jpg" alt="Image">
+          </div>
+      </div>
+      
+      <div class="item" data-category="category1" data-popularity="91" data-date="2024-04">
+          <div class="gallery-item">
+              <img src="category1/img31.jpg" alt="Image">
+          </div>
+      </div>
+      
+      <div class="item" data-category="category1" data-popularity="70" data-date="2024-05">
+          <div class="gallery-item">
+              <img src="category1/img32.jpg" alt="Image">
+          </div>
+      </div>
+      
+      <div class="item" data-category="category1" data-popularity="74" data-date="2024-06">
+          <div class="gallery-item">
+              <img src="category1/img33.jpg" alt="Image">
+          </div>
+      </div>
+      
+      <div class="item" data-category="category1" data-popularity="82" data-date="2024-07">
+          <div class="gallery-item">
+              <img src="category1/img34.jpg" alt="Image">
+          </div>
+      </div>
+      
+      <div class="item" data-category="category1" data-popularity="69" data-date="2024-08">
+          <div class="gallery-item">
+              <img src="category1/img35.jpg" alt="Image">
+          </div>
+      </div>
+      
+      <div class="item" data-category="category1" data-popularity="84" data-date="2024-09">
+          <div class="gallery-item">
+              <img src="category1/img36.jpg" alt="Image">
+          </div>
+      </div>
+      
+      <div class="item" data-category="category1" data-popularity="61" data-date="2024-10">
+          <div class="gallery-item">
+              <img src="category1/img37.jpg" alt="Image">
+          </div>
+      </div>
+      
+      <div class="item" data-category="category1" data-popularity="73" data-date="2024-11">
+          <div class="gallery-item">
+              <img src="category1/img38.jpg" alt="Image">
+          </div>
+      </div>
+      
+      <div class="item" data-category="category1" data-popularity="77" data-date="2024-12">
+          <div class="gallery-item">
+              <img src="category1/img39.jpg" alt="Image">
+          </div>
+      </div>
+
+      
+      
         <div class="item" data-category="category2" data-popularity="85" data-date="2024-01">
             <div class="gallery-item">
               <img src="category2/img1.jpg" alt="Image">
@@ -729,6 +987,13 @@
           </div>          
   </div> <!-- Closing gallery-container div -->
 
+
+  <div class="gallery-navigation">
+    <button id="prev-btn" disabled>Previous</button>
+    <button id="next-btn">Next</button>
+</div>
+
+
   <footer class="text-center">
     <p>&copy; 2025 SoCal Manga Club. Designed and developed by Emerald. All rights reserved.</p>
 </footer>
@@ -739,62 +1004,114 @@
   <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.0/lightgallery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.0/plugins/zoom/lg-zoom.min.js"></script>
  
- <script>
+  <script>
     document.addEventListener("DOMContentLoaded", function() {
-    const filterButtons = document.querySelectorAll(".filter-btn");
-    const sortSelect = document.getElementById("sort");
-    const items = document.querySelectorAll(".item");
-
-    // Function to filter items based on selected filter
-    function filterItems(filterValue) {
-        items.forEach(item => {
-        if (filterValue === "all" || item.dataset.category === filterValue) {
-            item.classList.remove("hidden"); // Show item
-        } else {
-            item.classList.add("hidden"); // Hide item
+        const filterButtons = document.querySelectorAll(".filter-btn");
+        const sortSelect = document.getElementById("sort");
+        const items = document.querySelectorAll(".item");
+        const prevBtn = document.getElementById("prev-btn");
+        const nextBtn = document.getElementById("next-btn");
+        const itemsPerPage = 6; // Number of items per page
+        let currentPage = 1;
+    
+        // Function to filter items based on selected filter
+        function filterItems(filterValue) {
+            items.forEach(item => {
+                if (filterValue === "all" || item.dataset.category === filterValue) {
+                    item.classList.remove("hidden"); // Show item
+                } else {
+                    item.classList.add("hidden"); // Hide item
+                }
+            });
+            currentPage = 1; // Reset to first page after filtering
+            updateGallery();
         }
-        });
-    }
-
-    // Function to sort items based on the selected sorting option
-    function sortItems(sortValue) {
-        const itemsArray = Array.from(items);
-        
-        if (sortValue === "newest") {
-        itemsArray.sort((a, b) => new Date(b.dataset.date) - new Date(a.dataset.date));
-        } else if (sortValue === "oldest") {
-        itemsArray.sort((a, b) => new Date(a.dataset.date) - new Date(b.dataset.date));
-        } else if (sortValue === "popular") {
-        itemsArray.sort((a, b) => b.dataset.popularity - a.dataset.popularity);
+    
+        // Function to sort items based on the selected sorting option
+        function sortItems(sortValue) {
+            const visibleItems = Array.from(items).filter(item => !item.classList.contains("hidden"));
+            
+            // Sorting logic
+            visibleItems.sort((a, b) => {
+                if (sortValue === "newest") {
+                    return new Date(b.dataset.date) - new Date(a.dataset.date); // Sort by newest
+                } else if (sortValue === "oldest") {
+                    return new Date(a.dataset.date) - new Date(b.dataset.date); // Sort by oldest
+                } else if (sortValue === "popular") {
+                    return b.dataset.popularity - a.dataset.popularity; // Sort by popularity
+                }
+                return 0; // Default case
+            });
+    
+            // Get the container where items are located
+            const container = document.querySelector(".content");
+    
+            // Remove all items first (to avoid appending them in the wrong order)
+            while (container.firstChild) {
+                container.removeChild(container.firstChild);
+            }
+    
+            // Append the sorted items back to the container in the correct order
+            visibleItems.forEach(item => container.appendChild(item));
         }
-
-        // Append sorted items back to the container
-        const container = document.querySelector(".content");
-        itemsArray.forEach(item => container.appendChild(item));
-    }
-
-    // Event listener for filter buttons
-    filterButtons.forEach(button => {
-        button.addEventListener("click", function() {
-        // Set active class on clicked button
-        filterButtons.forEach(btn => btn.classList.remove("active"));
-        button.classList.add("active");
-
-        // Get the selected filter value
-        const filterValue = button.dataset.filter;
-        filterItems(filterValue);
+    
+        // Function to update gallery display based on pagination and filters
+        const updateGallery = () => {
+            // Hide all items initially
+            items.forEach((item, index) => {
+                item.style.display = "none";
+            });
+    
+            // Show items for the current page
+            const visibleItems = Array.from(items).filter(item => !item.classList.contains("hidden"));
+            const start = (currentPage - 1) * itemsPerPage;
+            const end = start + itemsPerPage;
+    
+            // Show the items for the current page
+            for (let i = start; i < end && i < visibleItems.length; i++) {
+                visibleItems[i].style.display = "block";
+            }
+    
+            // Enable/disable pagination buttons
+            prevBtn.disabled = currentPage === 1;
+            nextBtn.disabled = currentPage === Math.ceil(visibleItems.length / itemsPerPage);
+        };
+    
+        // Event listener for filter buttons
+        filterButtons.forEach(button => {
+            button.addEventListener("click", function() {
+                filterButtons.forEach(btn => btn.classList.remove("active"));
+                button.classList.add("active");
+                const filterValue = button.dataset.filter;
+                filterItems(filterValue); // Apply the filter
+                sortItems(sortSelect.value); // Reapply sorting after filtering
+            });
         });
-    });
-
-    // Event listener for sorting dropdown
-    sortSelect.addEventListener("change", function() {
-        const sortValue = sortSelect.value;
-        sortItems(sortValue);
-    });
-
-    // Initial filter and sort
-    filterItems("all");
-    sortItems("newest");
+    
+        // Event listener for sorting dropdown
+        sortSelect.addEventListener("change", function() {
+            sortItems(sortSelect.value); // Apply sort
+        });
+    
+        // Event listeners for pagination buttons
+        prevBtn.addEventListener("click", function() {
+            if (currentPage > 1) {
+                currentPage--;
+                updateGallery();
+            }
+        });
+    
+        nextBtn.addEventListener("click", function() {
+            const visibleItems = Array.from(items).filter(item => !item.classList.contains("hidden"));
+            if (currentPage < Math.ceil(visibleItems.length / itemsPerPage)) {
+                currentPage++;
+                updateGallery();
+            }
+        });
+    
+        // Initialize filter, sort, and pagination
+        filterItems("all");
+        sortItems("newest");
     });
     </script>
     
