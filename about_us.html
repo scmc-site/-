@@ -156,105 +156,61 @@
     height: 100%;       /* Ensure the image takes up the full height of the container */
     }
 
+    .team-container {
+      background-color: #FFCC00;
+      padding: 30px 15px;
+    }
+
+    .team-container h1 {
+      font-size: 70px;
+      font-weight: bold;
+      color: #9B0300;
+      text-align: center;
+      margin-bottom: 70px;
+    }
+
     .team-member {
-    width: 330px;
-    height: 380px;
-    background: #FFCC00; /* Yellow Background */
-    border-radius: 20px; /* Rounded Corners */
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    overflow: hidden;
-    position: relative;
-    margin: 50px; /* Add bottom padding for gap */
-    }
-
-    .team-member0 {
-    width: 330px;
-    height: 380px;
-    background: #FFCC00; /* Yellow Background */
-    border-radius: 20px; /* Rounded Corners */
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    overflow: hidden;
-    position: relative;
-    margin-top: 50px;
-    margin-bottom: -10px; /* Add bottom padding for gap */
-    margin-left: 175px !important;
-    }
-
-    .team-member1 {
-    width: 330px;
-    height: 380px;
-    background: #FFCC00; /* Yellow Background */
-    border-radius: 20px; /* Rounded Corners */
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    overflow: hidden;
-    position: relative;
-    margin-top: 50px;
-    margin-bottom: -10px; /* Add bottom padding for gap */
-    margin-right: 175px !important;
-    }
-
-    .profile-pic {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+      max-width: 340px;
+      height: 440px;
+      background: #FFCC00;
+      border-radius: 15px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      overflow: hidden;
+      margin: 10px auto;
+      box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1);
+      text-align: center;
     }
 
     .profile-pic img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensure the image fills the space */
-    border-radius: 20px 20px 0 0; /* Round top corners */
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 15px 15px 0 0;
     }
 
     .details {
-    background: #9B0300; /* Deep Red */
-    color: #FFF; /* White Text */
-    font-family: 'Pixelify Sans', sans-serif; /* Pixelated Font */
-    text-transform: uppercase; /* Uppercase for all text */
-    padding: 10px;
-    border-radius: 0 0 20px 20px; /* Round bottom corners */
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    text-align: left;
+      background: #9B0300;
+      color: #FFF;
+      font-family: 'Pixelify Sans';
+      text-transform: uppercase;
+      padding: 10px;
+      border-radius: 0 0 15px 15px;
     }
 
     .details .name {
-    font-size: 20px;
-    flex: 1 1 100%;
+      font-size: 30px;
+      font-weight: bold;
     }
 
     .details .pronouns,
     .details .title {
-    font-size: 16px;
-    flex: 1 1 50%;
+      font-size: 0.9rem;
     }
 
-    .title {
-    text-align: right;
-    }
-
-    .custom-red {
-    color: #9B0300; /* Replace this with your desired shade of red */
-    }
-
-    /* Set background color and padding */
-    .team-container-fluid {
-    margin-left: 100px;
-    margin-right: 100px;
-    }
-
-    .team-container {
-    color:#FFCC00;
-    padding: 100px;
+    .pronouns {
+      margin-right: 15px;
     }
 
     footer {
@@ -266,123 +222,13 @@
       padding-top: 30px;
     }
 
-   /* Mobile View - For screens smaller than 990px */
-@media (max-width: 990px) {
-
-    /* Change the background color of the navbar on smaller screens */
-    #navbarNav {
-        background-color: #FFCC00;  /* Set navbar background to yellow */
+    @media (min-width: 768px) {
+      .team-container .row {
+        justify-content: center;
+      }
     }
 
-    /* Style for the Join button on smaller screens */
-    #joinBtn {
-        padding: 50px;               /* Add more padding to the button */
-        align-items: center;         /* Vertically center the button content */
-    }
 
-    /* Styling for navigation items */
-    .nav-item {
-        transition: transform 0.3s ease; /* Smooth hover effect */
-    }
-
-    /* Transition effect for navigation links */
-    .navbar-nav .nav-link {
-        transition: transform 0.3s ease; /* Smooth hover effect */
-    }
-
-    /* Hover effect for navigation links (scaling on hover) */
-    .navbar-nav .nav-link:hover {
-        transform: none;
-    }
-
-    .custom-column {
-      flex-direction: column;
-    }
-
-    h1 {
-        font-size: 40px; /* Reduce font size for smaller screens */
-        text-align: center; /* Center-align the text for better layout */
-    }
-
-    p {
-        font-size: 16px; /* Slightly reduce font size */
-        margin: 10px 0; /* Adjust margins for better spacing */
-        padding-bottom: 15px; /* Reduce padding to fit content neatly */
-        text-align: center; /* Center-align paragraph text for consistency */
-    }
-
-    /* Stack all team members in a single column */
-    .team-container .row {
-        display: flex;
-        flex-direction: column; /* Stack items vertically */
-        align-items: center; /* Center horizontally */
-        justify-content: center; /* Center vertically */
-    }
-
-    /* Ensure team members have no margin or padding */
-    .team-member, .team-member0, .team-member1 {
-        width: 280px;
-        height: 320px;
-        margin: 10px 0 !important; /* Add margin between items */
-        padding: 0 !important; /* No padding */
-    }
-
-    /* Specific margin adjustment for team-member0 and team-member1 */
-    .team-member0, .team-member1 {
-        margin-bottom: 20px !important; /* Space between team-member0 and team-member1 */
-    }
-
-    /* Adjust font size for smaller screens */
-    .details .name {
-        font-size: 14px;
-    }
-
-    .details .pronouns, .details .title {
-        font-size: 15px;
-    }
-
-    /* Adjust padding for team-container on mobile */
-    .team-container {
-        padding: 30px 10px; /* Adjust padding for smaller screens */
-    }
-
-    .team-container-fluid {
-        margin-left: 5px;
-        margin-right: 5px;
-    }
-
-    /* Ensure columns are full width and centered on mobile */
-    .team-container .col-12, 
-    .team-container .col-lg-6, 
-    .team-container .col-md-6, 
-    .team-container .col-lg-4, 
-    .team-container .col-md-4 {
-        flex: 1 1 100%; /* Make columns full width */
-        display: flex;
-        justify-content: center; /* Center the content horizontally */
-        align-items: center; /* Center content vertically */
-        margin-bottom: 20px; /* Add consistent spacing between columns */
-        padding: 0 !important; /* Remove padding */
-    }
-
-    /* Ensure no horizontal scrolling */
-    html, body {
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      overflow-x: hidden;  /* Prevent horizontal scrolling */
-    }
-
-    /* Remove margins from all containers and rows */
-    .row, .team-container, .team-member .team-member0 .team-member1 {
-        margin: 0 !important;  /* Remove any margin */
-        padding: 0 !important;  /* Remove any padding */
-        width: 100%;  /* Ensure elements don't exceed the viewport width */
-    }
-
-    .custom-red {
-      margin-top: 50px;  /* Adjust this value to the desired top margin */
-    }}
 
     </style>
 
@@ -512,82 +358,78 @@
         <div class="team-container-fluid p-0"> <!-- Set no padding here -->
           <div class="row">
             <div class="col-12 text-center p-4">
-              <h1 class="text-start custom-red">Meet the Team</h1>
-            </div>
-          </div>
-      
-          <!-- First Row with 2 Team Members (Side by side, closer side gap) -->
-          <div class="row g-0"> <!-- g-0 for no gap between columns -->
-            <div class="col-lg-6 col-md-6 col-sm-12 d-flex flex-column align-items-center">
-              <div class="team-member0">
-                <div class="profile-pic">
-                  <img src="team_0.jpg" alt="Team Member 1" />
+              <h1 class="custom-red">Meet the Team</h1>
+              <div class="row justify-content-center">
+                <!-- Team Member 1 -->
+                <div class="col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center">
+                  <div class="team-member">
+                    <div class="profile-pic">
+                      <img src="team_0.jpg" alt="Alex">
+                    </div>
+                    <div class="details">
+                      <span class="name">ALEX</span><br>
+                      <span class="pronouns">He/Him</span>
+                      <span class="title">Operations Lead</span>
+                    </div>
+                  </div>
                 </div>
-                <div class="details">
-                  <span class="name">ALEX</span>
-                  <span class="pronouns">He/Him</span>
-                  <span class="title">Operations Lead</span>
+                <!-- Team Member 2 -->
+                <div class="col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center">
+                  <div class="team-member">
+                    <div class="profile-pic">
+                      <img src="team_1.png" alt="Ross">
+                    </div>
+                    <div class="details">
+                      <span class="name">ROSS</span><br>
+                      <span class="pronouns">He/Him</span>
+                      <span class="title">Event Coordinator</span>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-      
-            <div class="col-lg-6 col-md-6 col-sm-12 d-flex flex-column align-items-center">
-              <div class="team-member1">
-                <div class="profile-pic">
-                  <img src="team_1.png" alt="Team Member 2" />
-                </div>
-                <div class="details">
-                  <span class="name">ROSS</span>
-                  <span class="pronouns">He/Him</span>
-                  <span class="title">Event Coordinator</span>
-                </div>
-              </div>
-            </div>
-          </div>
-      
-          <!-- Second Row with 3 Team Members (Below first row) -->
-          <div class="row second-row g-3"> <!-- g-3 for a standard gap between columns -->
-            <div class="col-lg-4 col-md-4 col-sm-12 d-flex flex-column align-items-center">
-              <div class="team-member">
-                <div class="profile-pic">
-                  <img src="team_2.jpg" alt="Team Member 3" />
-                </div>
-                <div class="details">
-                  <span class="name">NPC</span>
-                  <span class="pronouns">He/Him</span>
-                  <span class="title">Event Coordinator</span>
+                <!-- Team Member 3 -->
+                <div class="col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center">
+                  <div class="team-member">
+                    <div class="profile-pic">
+                      <img src="team_2.jpg" alt="NPC">
+                    </div>
+                    <div class="details">
+                      <span class="name">NPC</span><br>
+                      <span class="pronouns">He/Him</span>
+                      <span class="title">Event Coordinator</span>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-      
-            <div class="col-lg-4 col-md-4 col-sm-12 d-flex flex-column align-items-center">
-              <div class="team-member">
-                <div class="profile-pic">
-                  <img src="team_4.jpg" alt="Team Member 4" />
+              <div class="row justify-content-center">
+                <!-- Team Member 4 -->
+                <div class="col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center">
+                  <div class="team-member">
+                    <div class="profile-pic">
+                      <img src="team_4.jpg" alt="Emerald">
+                    </div>
+                    <div class="details">
+                      <span class="name">EMERALD</span><br>
+                      <span class="pronouns">She/Her</span>
+                      <span class="title">Design Coordinator</span>
+                    </div>
+                  </div>
                 </div>
-                <div class="details">
-                  <span class="name">EMERALD</span>
-                  <span class="pronouns">She/Her</span>
-                  <span class="title">Design Coordinator</span>
-                </div>
-              </div>
-            </div>
-      
-            <div class="col-lg-4 col-md-4 col-sm-12 d-flex flex-column align-items-center">
-              <div class="team-member">
-                <div class="profile-pic">
-                  <img src="team_3.jpg" alt="Team Member 5" />
-                </div>
-                <div class="details">
-                  <span class="name">BANCAKES</span>
-                  <span class="pronouns">She/Her</span>
-                  <span class="title">Art Lead</span>
+                <!-- Team Member 5 -->
+                <div class="col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center">
+                  <div class="team-member">
+                    <div class="profile-pic">
+                      <img src="team_3.jpg" alt="Bancakes">
+                    </div>
+                    <div class="details">
+                      <span class="name">BANCAKES</span><br>
+                      <span class="pronouns">She/Her</span>
+                      <span class="title">Art Lead</span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
       
       <footer class="text-center">
         <p>&copy; 2025 SoCal Manga Club. Designed and developed by Emerald. All rights reserved.</p>

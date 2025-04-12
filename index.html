@@ -145,225 +145,190 @@
       padding-right: 50px;
       padding-top: 30px;
     }
-    
-    /* Custom styles for the full-screen image */
-    .hero-section img {
-      width: 100%;    /* Full-width image */
-      height: 100%;   /* Full screen height */
-      object-fit: cover; /* Ensures the image covers the entire screen */
-    }
 
-    /* Custom styles for rotating the first column */
-    .rotate {
-      transform: rotate(-90deg);  /* Rotate 90 degrees counterclockwise */
-      transform-origin: center;   /* Keep rotation centered */
-      margin-bottom: 0;           /* Remove bottom margin */
-    }
-
-    /* Flexbox to position h1 and h2 closely together */
-    .heading-container {
-      display: flex;            /* Use flexbox for horizontal alignment */
-      align-items: center;      /* Vertically center the text */
-      gap: 0;                   /* No gap between h1 and h2 */
-      flex-direction: column;   /* Stack the h1 and h2 vertically */
-    }
-
-    /* Using inline-block to bring them closer */
-    h1, h2 {
-      font-family: 'Pixelify Sans';
-      margin: 0;  /* Remove default margin */
-      display: inline-block; /* Align h1 and h2 as inline-block for tighter positioning */
-    }
-
-    h1 {
-        font-size: 170px;
-        position: fixed;
-        top: 50%; /* Vertically center */
-        left: 50%; /* Horizontally center */
-        transform: translate(-50%, -50%); /* Move it exactly to the center */
-    }
-
-    h2 {
-      font-size: 44px;
-      margin-right: 200px;
-      width: 400px;
-    }
-
-    h3 {
-      font-family: 'Pixelify Sans';
-      font-size: 19px;
-      margin-right: 200px;
-      width: 400px;
-    }
-
-    /* Make sure the image is responsive */
-    .img-fluid {
-      max-width: 100%;
-      height: auto;
-      padding: 40px;
-      padding-right: 60px;
-    }
-
-    /* Add some space between h2 and h3 */
-    .heading-container h3 {
-      margin-top: 20px;
-    }
-
-    .btn-custom {
-    background-color: #FFCC00; /* Custom background color */
-    color: #070603; /* Color text */
-    border: none; /* Remove border */
-    font-family: 'Pixelify Sans';
-    font-size: 16px; /* Adjust font size */
-    cursor: pointer; /* Pointer cursor */
-    transition: background-color 0.3s ease; /* Smooth transition */
-    padding: 10px 10px; /* Adjust padding for a proper button size */
-    box-sizing: border-box; /* Include padding in height/width */
-    border-radius: 10px; /* Rounded corners for the button */
-    width: 155px; /* Take full width on smaller screens */
-    display: block; /* Ensure it behaves as a block-level element */
-    text-align: center; /* Center the text inside the button */
-    }
-
-
-    .btn-custom:hover {
-        background-color: #9B0300; /* Darker color text on hover */
-        color: #FFCC00;
-    }
-
-    .btn-container {
-        margin-top: 20px; /* Add margin on top */
-        margin-right: 450px;
-    }
-
-    .no-underline {
-    text-decoration: none; /* Remove underline */
-    }
-
-    /* Reduce padding for h2 and h3 on tablet screens */
-    @media (min-width: 481px) and (max-width: 768px) {
-    h2, h3 {
-        padding-left: 0px;
-        padding-right: 0px;
-    }
+   /* Hero Section with Top Image */
+.hero-section {
+  width: 100%; /* Full width for the hero section */
+  height: auto; /* Dynamic height */
 }
 
-    /* Mobile View - For screens smaller than 990px */
-    @media (max-width: 990px) {
-    /* Change the background color of the navbar on smaller screens */
-    #navbarNav {
-        background-color: #FFCC00;  /* Set navbar background to yellow */
-    }
+.hero-img {
+  width: 100%; /* Full-width image */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Cover the container */
+}
 
-    /* Style for the Join button on smaller screens */
-    #joinBtn {
-        padding: 50px;               /* Add more padding to the button */
-        align-items: center;         /* Vertically center the button content */
-    }
+/* Content Section: Text and Image */
+.content-container {
+  display: flex; /* Flexbox layout */
+  flex-wrap: wrap; /* Wrap items for responsiveness */
+  align-items: center; /* Vertically align items */
+  justify-content: space-between; /* Space between text and image */
+  padding: 50px; /* Padding around the section */
+  gap: 30px; /* Space between text and image */
+  margin: 0 auto; /* Center the content container horizontally */
+}
 
-    /* Styling for navigation items */
-    .nav-item {
-        transition: transform 0.3s ease; /* Smooth hover effect */
-    }
+/* Text Section */
+.text-container {
+  flex: 1; /* Take up available space */
+  text-align: left; /* Default left-aligned text */
+  margin-left: 0; /* Default margin-left is 0 */
+}
 
-    /* Transition effect for navigation links */
-    .navbar-nav .nav-link {
-        transition: transform 0.3s ease; /* Smooth hover effect */
-    }
+.heading-container h2 {
+  font-size: 36px; /* Heading size */
+  font-family: 'Pixelify Sans'; /* Font family */
+  margin-bottom: 20px; /* Space below the heading */
+  color: #070603; /* Text color */
+}
 
-    /* Hover effect for navigation links (scaling on hover) */
-    .navbar-nav .nav-link:hover {
-        transform: none;
-    }
+.heading-container h3 {
+  font-size: 18px; /* Subtitle size */
+  font-family: 'Pixelify Sans'; /* Font family */
+  line-height: 1.6; /* Line spacing */
+  color: #070603; /* Text color */
+  margin-bottom: 20px; /* Space below the subtitle */
+}
 
-    .hero-section img {
-        width: 100%;   /* Full width */
-        height: 30vh;  /* Full screen height */
-        object-fit: cover; /* Keep the image's aspect ratio while covering */
-        object-position: center center; /* Center the image */
-    }
+.btn-container {
+  margin-top: 20px; /* Space above the button */
+}
 
-    /* Make sure the image is responsive */
-    .img-fluid {
-      max-width: 100%;
-      height: auto;
-      padding: 0px;
-    }
+.btn-custom {
+  background-color: #FFCC00; /* Button color */
+  color: #070603; /* Text color */
+  border: none; /* Remove border */
+  font-family: 'Pixelify Sans'; /* Font family */
+  font-size: 16px; /* Font size */
+  cursor: pointer; /* Pointer cursor */
+  padding: 10px 20px; /* Button padding */
+  border-radius: 10px; /* Rounded corners */
+  text-align: center; /* Center text */
+  transition: background-color 0.3s ease; /* Hover effect */
+}
 
-    h1 {
-        display: none;
-    }
+.btn-custom:hover {
+  background-color: #9B0300; /* Hover color */
+  color: #FFCC00; /* Text hover color */
+}
 
-    /* Adjust the size of h2 for smaller screens */
-    h2 {
-        font-size: 30px;
-        width: auto;      /* Allow h2 to take its natural width */
-        margin-right: 0;  /* Remove right margin */
-        text-align: center; /* Center-align the text */
-        padding-left: 30px;
-        padding-right: 30px;
-    }
+/* Image Section */
+.image-container {
+  flex: 1; /* Take up available space */
+  display: flex; /* Flex layout */
+  justify-content: center; /* Center the image */
+  align-items: center; /* Center vertically */
+}
 
-    /* Adjust the size of h3 for smaller screens */
-    h3 {
-        font-size: 16px;
-        width: auto;      /* Allow h3 to take its natural width */
-        margin-right: 0;  /* Remove right margin */
-        text-align: center; /* Center-align the text */
-        margin-top: 10px; /* Adjust top margin */
-        line-height: 25px;
-        padding-left: 30px;
-        padding-right: 30px;
-        margin-bottom: 40px;
-    }
+.image-container img {
+  max-width: 100%; /* Scale image proportionally */
+  height: auto; /* Maintain aspect ratio */
+}
 
-    /* Stack the heading-container elements vertically */
-    .heading-container {
-        align-items: center;  /* Vertically center text */
-        flex-direction: column;  /* Stack h1, h2, and h3 vertically */
-    }
+/* Mobile View */
+@media (max-width: 768px) {
+  .content-container {
+    flex-direction: column; /* Stack items vertically */
+    padding: 20px; /* Reduce padding for mobile */
+    margin: 0 10px; /* Add some margin on sides */
+  }
 
-    /* Make image cover the screen without fixed size */
-    .hero-section img {
-        object-fit: cover;
-        height: auto;  /* Allow height to adjust dynamically */
-        width: 100%;   /* Ensure it covers the full width */
-    }
+  .text-container {
+    text-align: center; /* Center-align text */
+    margin: 0; /* Remove margin for mobile */
+  }
 
-    /* Adjust row layout for mobile */
-    .row {
-        flex-direction: column; /* Stack elements vertically */
-        align-items: center;    /* Center the elements */
-        gap: 50px;              /* Add space between elements */
-    }
+  .heading-container h2 {
+    font-size: 28px; /* Smaller heading size */
+  }
 
-    .btn-custom {
-        width: 100%; /* Full width on mobile screens */
-        padding: 12px 20px; /* Increase padding for better tap targets */
-        font-size: 18px; /* Larger text for readability */
-    }
+  .heading-container h3 {
+    font-size: 16px; /* Smaller subtitle size */
+    padding: 0 10px; /* Add padding for readability */
+  }
 
-    .btn-container {
-        margin-right: 0; /* Ensure no extra margin on mobile */
-    }}
+  .btn-container {
+    text-align: center; /* Center-align button */
+  }
 
-    /* Further mobile view for very small screens (max-width: 480px) */
-    @media (max-width: 480px) {
+  .image-container {
+    margin-top: 20px; /* Space above the image */
+    width: 100%; /* Full width */
+  }
 
-    /* Adjust the width of h2 and h3 for smaller screens */
-    h2, h3 {
-        width: auto; /* Allow natural width */
-        margin-right: 0; /* Remove margin */
-        text-align: center; /* Center align the text */
-    }
+  .image-container img {
+    width: 100%; /* Full width */
+    height: auto; /* Maintain aspect ratio */
+  }
+}
 
-    /* Make image scale well on very small screens */
-    .hero-section img {
-        object-fit: cover;
-        width: 100%;
-        height: 30vh; /* Ensure the image fills the screen height */
-    }
-    }
+/* Tablet View (Between 768px and 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .content-container {
+    flex-direction: column; /* Stack items vertically on tablet */
+    padding: 30px; /* Slightly more padding than mobile */
+    gap: 20px; /* Smaller gap between text and image */
+    margin: 0 20px; /* Add margin on sides for tablet */
+  }
+
+  .text-container {
+    text-align: center; /* Center-align text for tablet */
+    margin: 0; /* Remove left margin for tablet */
+  }
+
+  .heading-container h2 {
+    font-size: 32px; /* Adjust heading size for tablet */
+  }
+
+  .heading-container h3 {
+    font-size: 18px; /* Adjust subtitle size for tablet */
+    padding: 0 10px; /* Add some padding */
+  }
+
+  .btn-container {
+    text-align: center; /* Center-align button for tablet */
+  }
+
+  .image-container {
+    width: 100%; /* Full-width image container for tablet */
+    margin-top: 20px; /* Space above the image */
+  }
+
+  .image-container img {
+    width: 100%; /* Full width for tablet */
+    height: auto; /* Maintain aspect ratio */
+  }
+}
+
+/* Desktop View (991px and above) */
+@media (min-width: 991px) {
+  .content-container {
+    flex-direction: row; /* Side-by-side layout for desktop */
+    padding: 50px; /* Keep padding for desktop */
+    gap: 30px; /* Space between text and image */
+    margin: 0 auto; /* Center the content container */
+  }
+
+  .text-container {
+    text-align: left; /* Left-align text for desktop */
+    margin-left: 100px; /* Left margin for text container on desktop */
+  }
+
+  .heading-container h2 {
+    font-size: 36px; /* Larger heading size for desktop */
+    text-align: left; /* Left-align title for desktop */
+  }
+
+  .heading-container h3 {
+    font-size: 18px; /* Subtitle size for desktop */
+    text-align: left; /* Left-align subtitle for desktop */
+  }
+
+  .btn-container {
+    text-align: left; /* Left-align button for desktop */
+  }
+}
 
     </style>
 
@@ -421,46 +386,39 @@
 </nav>
 
 
-  <!-- Hero Image Section (Full-screen image) -->
-  <div class="hero-section">
-    <img src="main_1.png" alt="Main Image">
+<!-- Hero Section with Top Image -->
+<div class="hero-section">
+    <img src="main_1.png" alt="Main Top Image" class="hero-img">
   </div>
 
-  <!-- Three Column Layout -->
-  <div class="container mt-5">
-    <div class="row g-0 align-items-center">
-      <!-- First column: Rotated "SCMC" text (only one h1 here) -->
-      <div class="col-md-4 d-flex justify-content-center">
-        <div class="rotate">
-          <h1>SCMC</h1>
+    <div class="content-container">
+      <!-- Left column: Text -->
+      <div class="text-container">
+        <div class="heading-container">
+          <h2>WELCOME TO SO-CAL MANGA CLUB</h2>
+          <h3>
+            We’re a friendly group of manga fans in Southern California who share recommendations, 
+            talk about our favorite stories, and explore all kinds of manga. We also organize fun 
+            outdoor events like hiking trips, convention center visits, and other exciting activities. 
+            Whether you’ve been reading manga for years or are just curious, this is the perfect place 
+            to connect, learn, and have fun with fellow fans!
+          </h3>
+          <div class="btn-container">
+            <a href="about_us.html" class="no-underline">
+              <button class="btn-custom" type="button">LEARN MORE</button>
+            </a>
+          </div>
         </div>
       </div>
-
-
-    <!-- Second column: Heading and description -->
-    <div class="col-md-4">
-        <div class="heading-container">
-            <h2>WELCOME TO SO-CAL MANGA CLUB</h2> <!-- Heading text -->
-            <h3>We’re a friendly group of manga fans in Southern California who share recommendations, 
-                talk about our favorite stories, and explore all kinds of manga. We also organize fun outdoor events 
-                like hiking trips, convention center visits, and other exciting activities. Whether you’ve been reading 
-                manga for years or are just curious, this is the perfect place to connect, learn, and have fun with 
-                fellow fans!</h3>
-
-            <!-- Button aligned left on larger screens and centered on smaller screens -->
-            <a href="about_us.html" class="no-underline">            
-                <div class="btn-container">
-                <button class="btn-custom" type="button">LEARN_MORE</button>
-            </div>
-        </div>
-    </div></a>
-
-      <!-- Third column: Image -->
-      <div class="col-md-4">
+  
+      <!-- Right column: Image -->
+      <div class="image-container">
         <img src="main_2.png" class="img-fluid" alt="SCMC Image">
       </div>
     </div>
   </div>
+  
+  
 
 <footer class="text-center">
     <p>&copy; 2025 SoCal Manga Club. Designed and developed by Emerald. All rights reserved.</p>
