@@ -28,116 +28,121 @@
     /* Navigation Section */
 
 
-    /* General navbar styling */
-    .navbar {
-        padding-right: 15px;  /* Padding on the right side of the navbar */
-        padding-left: 15px;   /* Padding on the left side of the navbar */
-    }
+/* General navbar styling */
+.navbar {
+    padding-right: 15px;
+    padding-left: 15px;
+}
 
-    /* Custom navbar with a yellow background */
-    .navbar-custom {
-        height: 100px;  /* Height of the navbar */
-        width: auto;    /* Auto width to fit content */
-        background-color: #FFCC00;  /* Background color */
-        z-index: 5;
-    }
+/* Custom navbar with a yellow background */
+.navbar-custom {
+    height: 100px;
+    width: 100%; /* Ensure full width */
+    background-color: #FFCC00 !important; /* Ensures it applies over other styles */
+    z-index: 1050; /* Ensure it sits on top */
+}
 
-    /* Custom background for specific elements */
-    .custom-bg {
-        background-color: #FFCC00;  /* Background color for elements with .custom-bg */
-    }
+/* Collapsed navbar styles */
+.navbar-collapse {
+    background-color: #FFCC00 !important; /* Match navbar background */
+}
 
-    /* Styling for the navbar brand */
-    .navbar-brand {
-        display: flex;             /* Flexbox to align items */
-        align-items: center;       /* Vertically center items */
-        margin-left: 20px;         /* Left margin for spacing */
-        transition: transform 0.3s ease; /* Smooth transition for hover effect */
-    }
+/* Ensure proper background color for the toggler button */
+.navbar-toggler {
+    background-color: #FFCC00 !important; /* Add background color to the toggler */
+    border: none;
+}
 
-    /* Hover effect for the navbar brand (scaling the brand) */
-    .navbar-brand:hover {
-        transform: scale(1.1);  /* Slightly enlarge the brand on hover */
-    }
+/* Styling for the navbar brand */
+.navbar-brand {
+    display: flex;             /* Flexbox to align items */
+    align-items: center;       /* Vertically center items */
+    margin-left: 20px;         /* Left margin for spacing */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
 
-    /* Styling for the logo image */
-    #logo-img {
-        padding-right: 20px;  /* Padding on the right of the logo image */
-        height: 54px;         /* Fixed height for the logo */
-        width: auto;          /* Automatically adjust width to maintain aspect ratio */
-    }
+/* Hover effect for the navbar brand (scaling the brand) */
+.navbar-brand:hover {
+    transform: scale(1.1);  /* Slightly enlarge the brand on hover */
+}
 
-    /* Styling for the logo text */
-    #logo-text {
-        font-family: 'Charter BT Roman';  /* Custom font for logo text */
-        font-size: 46px;                   /* Font size for the logo text */
-        color: #9B0300;                    /* Dark red color for the logo text */
-    }
+/* Styling for the logo image */
+#logo-img {
+    padding-right: 20px;  /* Padding on the right of the logo image */
+    height: 54px;         /* Fixed height for the logo */
+    width: auto;          /* Automatically adjust width to maintain aspect ratio */
+}
 
-    /* Styling for navigation items */
-    .nav-item {
-        font-family: 'Pixelify Sans';  /* Font for navigation items */
-        font-size: 18px;               /* Font size for navigation items */
-        padding: 20px;                 /* Padding around the nav items */
-        cursor: pointer;              /* Pointer cursor for clickable items */
-        transition: transform 0.3s ease; /* Smooth hover effect */
-        display: inline-block;         /* Display items inline */
-        z-index: 5;
-    }
+/* Styling for the logo text */
+#logo-text {
+    font-family: 'Charter BT Roman';  /* Custom font for logo text */
+    font-size: 46px;                   /* Font size for the logo text */
+    color: #9B0300;                    /* Dark red color for the logo text */
+}
 
-    /* Styling for nav items in navbar-custom */
-    .navbar-custom .navbar-brand,
-    .navbar-custom .nav-link {
-        color: #070603;  /* Dark color for navbar links */
-    }
+/* Styling for navigation items */
+.nav-item {
+    font-family: 'Pixelify Sans';  /* Font for navigation items */
+    font-size: 18px;               /* Font size for navigation items */
+    padding: 20px;                 /* Padding around the nav items */
+    cursor: pointer;              /* Pointer cursor for clickable items */
+    transition: transform 0.3s ease; /* Smooth hover effect */
+    display: inline-block;         /* Display items inline */
+    z-index: 5;
+}
 
-    /* Transition effect for navigation links */
-    .navbar-nav .nav-link {
-        transition: transform 0.3s ease; /* Smooth hover effect */
-    }
+/* Styling for nav items in navbar-custom */
+.navbar-custom .navbar-brand,
+.navbar-custom .nav-link {
+    color: #070603;  /* Dark color for navbar links */
+}
 
-    /* Hover effect for navigation links (scaling on hover) */
-    .navbar-nav .nav-link:hover {
-        transform: scale(1.1); /* Enlarge links on hover */
-    }
+/* Transition effect for navigation links */
+.navbar-nav .nav-link {
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
 
-    /* Hover effect for navbar-custom links */
-    .navbar-custom .nav-link:hover {
-        color: #9B0300;  /* Change color to dark red on hover */
-    }
+/* Hover effect for navigation links (scaling on hover) */
+.navbar-nav .nav-link:hover {
+    transform: scale(1.1); /* Enlarge links on hover */
+}
 
-    /* Change the SVG icon when hovering on the join button */
-    #joinBtn:hover #svgIcon {
-        content: url('join_us_button_2.svg'); /* Change to the new SVG icon */
-    }
+/* Hover effect for navbar-custom links */
+.navbar-custom .nav-link:hover {
+    color: #9B0300;  /* Change color to dark red on hover */
+}
 
-    /* Styling for the navbar-toggler button (hamburger menu) */
-    .navbar-toggler {
-        border: none;             /* Remove the default border */
-        outline: none;            /* Remove the outline when focused */
-        background-color: transparent; /* Make the background transparent */
-        padding: 10px;            /* Padding around the toggler */
-        cursor: pointer;         /* Pointer cursor on hover */
-        position: relative;       /* Allow positioning of the button */
-    }
+/* Change the SVG icon when hovering on the join button */
+#joinBtn:hover #svgIcon {
+    content: url('join_us_button_2.svg'); /* Change to the new SVG icon */
+}
 
-    /* Make the icon inside navbar-toggler bigger and add a smooth transition */
-    .navbar-toggler i {
-        font-size: 2rem;                          /* Initial size of the icon */
-        display: block;                           /* Display icon as a block */
-        transition: transform 0.3s ease, font-size 0.3s ease; /* Smooth transition for transform and font-size */
-    }
+/* Styling for the navbar-toggler button (hamburger menu) */
+.navbar-toggler {
+    border: none;             /* Remove the default border */
+    outline: none;            /* Remove the outline when focused */
+    background-color: transparent; /* Make the background transparent */
+    padding: 10px;            /* Padding around the toggler */
+    cursor: pointer;         /* Pointer cursor on hover */
+    position: relative;       /* Allow positioning of the button */
+}
 
-    /* Rotate the icon to form an "X" when toggled */
-    .navbar-toggler.open i {
-        transform: rotate(45deg); /* Rotate middle line to form an "X" */
-    }
+/* Make the icon inside navbar-toggler bigger and add a smooth transition */
+.navbar-toggler i {
+    font-size: 2rem;                          /* Initial size of the icon */
+    display: block;                           /* Display icon as a block */
+    transition: transform 0.3s ease, font-size 0.3s ease; /* Smooth transition for transform and font-size */
+}
 
-    /* Increase the size of the icon when toggler is open */
-    .navbar-toggler.open i {
-        font-size: 2.5rem; /* Increase font size for the toggler icon */
-    }
+/* Rotate the icon to form an "X" when toggled */
+.navbar-toggler.open i {
+    transform: rotate(45deg); /* Rotate middle line to form an "X" */
+}
 
+/* Increase the size of the icon when toggler is open */
+.navbar-toggler.open i {
+    font-size: 2.5rem; /* Increase font size for the toggler icon */
+}
 
 
     /* Contact Us Section */
@@ -228,30 +233,8 @@
 
     /* Mobile View - For screens smaller than 990px */
     @media (max-width: 990px) {
-    /* Change the background color of the navbar on smaller screens */
-    #navbarNav {
-        background-color: #FFCC00;  /* Set navbar background to yellow */
-    }
-
-    /* Style for the Join button on smaller screens */
-    #joinBtn {
-        padding: 50px;               /* Add more padding to the button */
-        align-items: center;         /* Vertically center the button content */
-    }
-
-    /* Styling for navigation items */
-    .nav-item {
-        transition: transform 0.3s ease; /* Smooth hover effect */
-    }
-
-    /* Transition effect for navigation links */
-    .navbar-nav .nav-link {
-        transition: transform 0.3s ease; /* Smooth hover effect */
-    }
-
-    /* Hover effect for navigation links (scaling on hover) */
-    .navbar-nav .nav-link:hover {
-        transform: none;
+    .navbar-collapse {
+    padding-bottom: 15px;
     }
 
     .contact-img {
@@ -289,10 +272,11 @@
       }
     
       .social-icons {
-        top: 450px; /* Adjust the top position for mobile */
+        top: 350px; /* Adjust the top position for mobile */
         left: 0px; /* Move icons closer to the left edge */
         justify-content: center; /* Center the icons */
         width: 100%; /* Allow icons to take the full width */
+        position: absolute;
     }
 
     .social-icon {
@@ -303,56 +287,58 @@
 
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
-        <div class="container-fluid">
-            <!-- Logo Section -->
-            <a class="navbar-brand" href="index.html">
-                <img src="bear_mascot.svg" alt="Logo" id="logo-img">
-                <span id="logo-text">SCMC</span> <!-- Corrected logo-text element -->
-            </a>
-    
-            <button 
-            class="navbar-toggler" 
-            type="button" 
-            data-bs-toggle="collapse" 
-            data-bs-target="#navbarNav" 
-            aria-controls="navbarNav" 
-            aria-expanded="false" 
-            aria-label="Toggle navigation"
-            onclick="toggleIcon(this)"
-            style="background-color: transparent; color: #070603;"
-        >
-            <i class="bi bi-list"></i> <!-- Default icon -->
-        </button>
-        
-        
-        <!-- Collapsing Navbar Links -->
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav mx-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="about_us.html">ABOUT_US</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="events.html">EVENTS</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="gallery.html">GALLERY</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contact_us.html">CONTACT_US</a>
-                </li>
-            </ul>
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+    <div class="container-fluid">
+        <!-- Logo Section -->
+        <a class="navbar-brand" href="index.html">
+            <img src="bear_mascot.svg" alt="Logo" id="logo-img">
+            <span id="logo-text">SCMC</span> <!-- Corrected logo-text element -->
+        </a>
 
-            <!-- Join Us Button (inside the collapsed navbar) -->
-            <div class="d-flex justify-content-center justify-content-lg-end">
-                <a href="https://discord.gg/vwg9rMtNT8">                  
-                <button class="btn d-flex align-items-center justify-content-center" id="joinBtn">
-                    <img src="join_us_button.svg" alt="Join Us" id="svgIcon">
-                </button></a>
-            </div>
-        </div>
-    </div>
+        <button 
+        class="navbar-toggler" 
+        type="button" 
+        data-bs-toggle="collapse" 
+        data-bs-target="#navbarNav" 
+        aria-controls="navbarNav" 
+        aria-expanded="false" 
+        aria-label="Toggle navigation"
+        onclick="toggleIcon(this)"
+        style="background-color: transparent; color: #070603;"
+    >
+        <i class="bi bi-list"></i> <!-- Default icon -->
+    </button>
+    
+    
+    <!-- Collapsing Navbar Links -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="about_us.html">ABOUT_US</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="events.html">EVENTS</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="gallery.html">GALLERY</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contact_us.html">CONTACT_US</a>
+            </li>
+        </ul>
+
+        <!-- Join Us Button (inside the collapsed navbar) -->
+        <div class="d-flex justify-content-center justify-content-lg-end">
+          <a href="https://discord.gg/vwg9rMtNT8">                  
+          <button class="btn d-flex align-items-center justify-content-center" id="joinBtn">
+              <img src="join_us_button.svg" alt="Join Us" id="svgIcon">
+          </button></a>
+      </div>
+  </div>
+</div>
 </nav>
+
+
 
 <div class="container-fluid p-0">
     <div class="row no-gutters">

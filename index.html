@@ -28,114 +28,128 @@
     /* Navigation Section */
 
 
-    /* General navbar styling */
-    .navbar {
-        padding-right: 15px;  /* Padding on the right side of the navbar */
-        padding-left: 15px;   /* Padding on the left side of the navbar */
+/* General navbar styling */
+.navbar {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+/* Custom navbar with a yellow background */
+.navbar-custom {
+    height: 100px;
+    width: 100%; /* Ensure full width */
+    background-color: #FFCC00 !important; /* Ensures it applies over other styles */
+    z-index: 1050; /* Ensure it sits on top */
+}
+
+/* Collapsed navbar styles */
+.navbar-collapse {
+    background-color: #FFCC00 !important; /* Match navbar background */
+}
+
+/* Ensure proper background color for the toggler button */
+.navbar-toggler {
+    background-color: #FFCC00 !important; /* Add background color to the toggler */
+    border: none;
+}
+
+/* Styling for the navbar brand */
+.navbar-brand {
+    display: flex;             /* Flexbox to align items */
+    align-items: center;       /* Vertically center items */
+    margin-left: 20px;         /* Left margin for spacing */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Hover effect for the navbar brand (scaling the brand) */
+.navbar-brand:hover {
+    transform: scale(1.1);  /* Slightly enlarge the brand on hover */
+}
+
+/* Styling for the logo image */
+#logo-img {
+    padding-right: 20px;  /* Padding on the right of the logo image */
+    height: 54px;         /* Fixed height for the logo */
+    width: auto;          /* Automatically adjust width to maintain aspect ratio */
+}
+
+/* Styling for the logo text */
+#logo-text {
+    font-family: 'Charter BT Roman';  /* Custom font for logo text */
+    font-size: 46px;                   /* Font size for the logo text */
+    color: #9B0300;                    /* Dark red color for the logo text */
+}
+
+/* Styling for navigation items */
+.nav-item {
+    font-family: 'Pixelify Sans';  /* Font for navigation items */
+    font-size: 18px;               /* Font size for navigation items */
+    padding: 20px;                 /* Padding around the nav items */
+    cursor: pointer;              /* Pointer cursor for clickable items */
+    transition: transform 0.3s ease; /* Smooth hover effect */
+    display: inline-block;         /* Display items inline */
+    z-index: 5;
+}
+
+/* Styling for nav items in navbar-custom */
+.navbar-custom .navbar-brand,
+.navbar-custom .nav-link {
+    color: #070603;  /* Dark color for navbar links */
+}
+
+/* Transition effect for navigation links */
+.navbar-nav .nav-link {
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover effect for navigation links (scaling on hover) */
+.navbar-nav .nav-link:hover {
+    transform: scale(1.1); /* Enlarge links on hover */
+}
+
+/* Hover effect for navbar-custom links */
+.navbar-custom .nav-link:hover {
+    color: #9B0300;  /* Change color to dark red on hover */
+}
+
+/* Change the SVG icon when hovering on the join button */
+#joinBtn:hover #svgIcon {
+    content: url('join_us_button_2.svg'); /* Change to the new SVG icon */
+}
+
+/* Styling for the navbar-toggler button (hamburger menu) */
+.navbar-toggler {
+    border: none;             /* Remove the default border */
+    outline: none;            /* Remove the outline when focused */
+    background-color: transparent; /* Make the background transparent */
+    padding: 10px;            /* Padding around the toggler */
+    cursor: pointer;         /* Pointer cursor on hover */
+    position: relative;       /* Allow positioning of the button */
+}
+
+/* Make the icon inside navbar-toggler bigger and add a smooth transition */
+.navbar-toggler i {
+    font-size: 2rem;                          /* Initial size of the icon */
+    display: block;                           /* Display icon as a block */
+    transition: transform 0.3s ease, font-size 0.3s ease; /* Smooth transition for transform and font-size */
+}
+
+/* Rotate the icon to form an "X" when toggled */
+.navbar-toggler.open i {
+    transform: rotate(45deg); /* Rotate middle line to form an "X" */
+}
+
+/* Increase the size of the icon when toggler is open */
+.navbar-toggler.open i {
+    font-size: 2.5rem; /* Increase font size for the toggler icon */
+}
+
+body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
     }
 
-    /* Custom navbar with a yellow background */
-    .navbar-custom {
-        height: 100px;  /* Height of the navbar */
-        width: auto;    /* Auto width to fit content */
-        background-color: #FFCC00;  /* Background color */
-        z-index: 5;
-    }
-
-    /* Custom background for specific elements */
-    .custom-bg {
-        background-color: #FFCC00;  /* Background color for elements with .custom-bg */
-    }
-
-    /* Styling for the navbar brand */
-    .navbar-brand {
-        display: flex;             /* Flexbox to align items */
-        align-items: center;       /* Vertically center items */
-        margin-left: 20px;         /* Left margin for spacing */
-        transition: transform 0.3s ease; /* Smooth transition for hover effect */
-    }
-
-    /* Hover effect for the navbar brand (scaling the brand) */
-    .navbar-brand:hover {
-        transform: scale(1.1);  /* Slightly enlarge the brand on hover */
-    }
-
-    /* Styling for the logo image */
-    #logo-img {
-        padding-right: 20px;  /* Padding on the right of the logo image */
-        height: 54px;         /* Fixed height for the logo */
-        width: auto;          /* Automatically adjust width to maintain aspect ratio */
-    }
-
-    /* Styling for the logo text */
-    #logo-text {
-        font-family: 'Charter BT Roman';  /* Custom font for logo text */
-        font-size: 46px;                   /* Font size for the logo text */
-        color: #9B0300;                    /* Dark red color for the logo text */
-    }
-
-    /* Styling for navigation items */
-    .nav-item {
-        font-family: 'Pixelify Sans';  /* Font for navigation items */
-        font-size: 18px;               /* Font size for navigation items */
-        padding: 20px;                 /* Padding around the nav items */
-        cursor: pointer;              /* Pointer cursor for clickable items */
-        transition: transform 0.3s ease; /* Smooth hover effect */
-        display: inline-block;         /* Display items inline */
-    }
-
-    /* Styling for nav items in navbar-custom */
-    .navbar-custom .navbar-brand,
-    .navbar-custom .nav-link {
-        color: #070603;  /* Dark color for navbar links */
-    }
-
-    /* Transition effect for navigation links */
-    .navbar-nav .nav-link {
-        transition: transform 0.3s ease; /* Smooth hover effect */
-    }
-
-    /* Hover effect for navigation links (scaling on hover) */
-    .navbar-nav .nav-link:hover {
-        transform: scale(1.1); /* Enlarge links on hover */
-    }
-
-    /* Hover effect for navbar-custom links */
-    .navbar-custom .nav-link:hover {
-        color: #9B0300;  /* Change color to dark red on hover */
-    }
-
-    /* Change the SVG icon when hovering on the join button */
-    #joinBtn:hover #svgIcon {
-        content: url('join_us_button_2.svg'); /* Change to the new SVG icon */
-    }
-
-    /* Styling for the navbar-toggler button (hamburger menu) */
-    .navbar-toggler {
-        border: none;             /* Remove the default border */
-        outline: none;            /* Remove the outline when focused */
-        background-color: transparent; /* Make the background transparent */
-        padding: 10px;            /* Padding around the toggler */
-        cursor: pointer;         /* Pointer cursor on hover */
-        position: relative;       /* Allow positioning of the button */
-    }
-
-    /* Make the icon inside navbar-toggler bigger and add a smooth transition */
-    .navbar-toggler i {
-        font-size: 2rem;                          /* Initial size of the icon */
-        display: block;                           /* Display icon as a block */
-        transition: transform 0.3s ease, font-size 0.3s ease; /* Smooth transition for transform and font-size */
-    }
-
-    /* Rotate the icon to form an "X" when toggled */
-    .navbar-toggler.open i {
-        transform: rotate(45deg); /* Rotate middle line to form an "X" */
-    }
-
-    /* Increase the size of the icon when toggler is open */
-    .navbar-toggler.open i {
-        font-size: 2.5rem; /* Increase font size for the toggler icon */
-    }
 
     footer {
       color: #070603;
@@ -144,6 +158,7 @@
       padding-left: 50px;
       padding-right: 50px;
       padding-top: 30px;
+      padding-bottom: 30px;
     }
 
    /* Hero Section with Top Image */
@@ -177,18 +192,18 @@
 }
 
 .heading-container h2 {
-  font-size: 36px; /* Heading size */
-  font-family: 'Pixelify Sans'; /* Font family */
-  margin-bottom: 20px; /* Space below the heading */
-  color: #070603; /* Text color */
+  font-size: 45px !important; /* Increased heading size */
+  font-family: 'Pixelify Sans', sans-serif !important; /* Font family */
+  margin-bottom: 30px !important; /* Increased space below the heading */
+  color: #070603 !important; /* Text color */
 }
 
 .heading-container h3 {
-  font-size: 18px; /* Subtitle size */
-  font-family: 'Pixelify Sans'; /* Font family */
-  line-height: 1.6; /* Line spacing */
-  color: #070603; /* Text color */
-  margin-bottom: 20px; /* Space below the subtitle */
+  font-size: 18px !important; /* Increased subtitle size */
+  font-family: 'Pixelify Sans', sans-serif !important; /* Font family */
+  line-height: 1.6 !important; /* Line spacing */
+  color: #070603 !important; /* Text color */
+  margin-bottom: 30px !important; /* Increased space below the subtitle */
 }
 
 .btn-container {
@@ -200,7 +215,7 @@
   color: #070603; /* Text color */
   border: none; /* Remove border */
   font-family: 'Pixelify Sans'; /* Font family */
-  font-size: 16px; /* Font size */
+  font-size: 18px;
   cursor: pointer; /* Pointer cursor */
   padding: 10px 20px; /* Button padding */
   border-radius: 10px; /* Rounded corners */
@@ -226,6 +241,25 @@
   height: auto; /* Maintain aspect ratio */
 }
 
+@media (max-width: 990px) {
+.navbar-collapse {
+  padding-bottom: 15px;
+}
+
+.hero-section {
+    width: 100%;
+    height: 300px; /* Set a fixed height for a square effect */
+    overflow: hidden; /* Ensure image doesn't overflow */
+  }
+
+.hero-img {
+  width: 100%;
+    height: 100%; /* Match the container's height */
+    object-fit: cover;
+    transform: scale(1); /* Initial scale */
+}}
+
+  
 /* Mobile View */
 @media (max-width: 768px) {
   .content-container {
@@ -237,10 +271,11 @@
   .text-container {
     text-align: center; /* Center-align text */
     margin: 0; /* Remove margin for mobile */
+    margin-top: 20px;
   }
 
   .heading-container h2 {
-    font-size: 28px; /* Smaller heading size */
+    font-size: 38px; /* Smaller heading size */
   }
 
   .heading-container h3 {
@@ -262,6 +297,7 @@
     height: auto; /* Maintain aspect ratio */
   }
 }
+
 
 /* Tablet View (Between 768px and 991px) */
 @media (min-width: 768px) and (max-width: 991px) {
@@ -428,63 +464,63 @@
     
     <script>
 
-        function toggleIcon(button) {
-            // Toggle the background color and text color of the button
-            const currentColor = button.style.backgroundColor;
+      function toggleIcon(button) {
+          // Toggle the background color and text color of the button
+          const currentColor = button.style.backgroundColor;
 
-            if (currentColor === 'transparent') { 
-                button.style.backgroundColor = 'transparent'; // Set background to transparent
-                button.style.color = '#070603'; // Reset color
-            } else {
-                button.style.backgroundColor = 'transparent'; // Set background to dark color
-                button.style.color = '#070603'; // Set color to white
-            }
+          if (currentColor === 'transparent') { 
+              button.style.backgroundColor = 'transparent'; // Set background to transparent
+              button.style.color = '#070603'; // Reset color
+          } else {
+              button.style.backgroundColor = 'transparent'; // Set background to dark color
+              button.style.color = '#070603'; // Set color to white
+          }
 
-            // Get the icon element inside the button
-            const icon = button.querySelector('i');
-            const isHamburger = icon.classList.contains('bi-list');
+          // Get the icon element inside the button
+          const icon = button.querySelector('i');
+          const isHamburger = icon.classList.contains('bi-list');
 
-            // Toggle the icon and apply animation via class
-            if (isHamburger) {
-                icon.classList.remove('bi-list');
-                icon.classList.add('bi-x'); // Switch to 'X' icon
-                icon.classList.add('rotate'); // Rotate the icon
-                icon.classList.add('grow'); // Increase icon size
-            } else {
-                icon.classList.remove('bi-x');
-                icon.classList.add('bi-list'); // Switch back to 'hamburger' icon
-                icon.classList.remove('rotate'); // Remove rotation
-                icon.classList.remove('grow'); // Reset icon size
-            }
-        }
+          // Toggle the icon and apply animation via class
+          if (isHamburger) {
+              icon.classList.remove('bi-list');
+              icon.classList.add('bi-x'); // Switch to 'X' icon
+              icon.classList.add('rotate'); // Rotate the icon
+              icon.classList.add('grow'); // Increase icon size
+          } else {
+              icon.classList.remove('bi-x');
+              icon.classList.add('bi-list'); // Switch back to 'hamburger' icon
+              icon.classList.remove('rotate'); // Remove rotation
+              icon.classList.remove('grow'); // Reset icon size
+          }
+      }
 
-        const button = document.getElementById('joinBtn');
-        const svgImage = document.getElementById('svgIcon');
+      const button = document.getElementById('joinBtn');
+      const svgImage = document.getElementById('svgIcon');
+    
+      // Event listener to change the SVG when the button is clicked or focused
+      button.addEventListener('focus', changeSVG);
+      button.addEventListener('click', changeSVG);
+    
+      // Event listener to reset the SVG when the button loses focus
+      button.addEventListener('blur', resetSVG);
+    
+      function changeSVG() {
+        svgImage.src = 'join_us_button_2.svg';  // Change to the new SVG (join_us_button_2.svg)
+      }
+    
+      function resetSVG() {
+        svgImage.src = 'join_us_button.svg';  // Reset to the original SVG (join_us_button.svg)
+      }
+
+      document.addEventListener('DOMContentLoaded', function () {
+      const toggler = document.querySelector('.navbar-toggler');
       
-        // Event listener to change the SVG when the button is clicked or focused
-        button.addEventListener('focus', changeSVG);
-        button.addEventListener('click', changeSVG);
-      
-        // Event listener to reset the SVG when the button loses focus
-        button.addEventListener('blur', resetSVG);
-      
-        function changeSVG() {
-          svgImage.src = 'join_us_button_2.svg';  // Change to the new SVG (join_us_button_2.svg)
-        }
-      
-        function resetSVG() {
-          svgImage.src = 'join_us_button.svg';  // Reset to the original SVG (join_us_button.svg)
-        }
-
-        document.addEventListener('DOMContentLoaded', function () {
-        const toggler = document.querySelector('.navbar-toggler');
-        
-        // Add event listener to toggle the collapsed class
-        toggler.addEventListener('click', function () {
-            toggler.classList.toggle('collapsed');  // This will toggle the "X" effect
-        });
-        });
-  </script>
+      // Add event listener to toggle the collapsed class
+      toggler.addEventListener('click', function () {
+          toggler.classList.toggle('collapsed');  // This will toggle the "X" effect
+      });
+      });
+</script>
 
 </body>
 </html>

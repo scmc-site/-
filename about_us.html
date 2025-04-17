@@ -28,124 +28,140 @@
     /* Navigation Section */
 
 
-    /* General navbar styling */
-    .navbar {
-        padding-right: 15px;  /* Padding on the right side of the navbar */
-        padding-left: 15px;   /* Padding on the left side of the navbar */
+/* General navbar styling */
+.navbar {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+/* Custom navbar with a yellow background */
+.navbar-custom {
+    height: 100px;
+    width: 100%; /* Ensure full width */
+    background-color: #FFCC00 !important; /* Ensures it applies over other styles */
+    z-index: 1050; /* Ensure it sits on top */
+}
+
+/* Collapsed navbar styles */
+.navbar-collapse {
+    background-color: #FFCC00 !important; /* Match navbar background */
+}
+
+/* Ensure proper background color for the toggler button */
+.navbar-toggler {
+    background-color: #FFCC00 !important; /* Add background color to the toggler */
+    border: none;
+}
+
+/* Styling for the navbar brand */
+.navbar-brand {
+    display: flex;             /* Flexbox to align items */
+    align-items: center;       /* Vertically center items */
+    margin-left: 20px;         /* Left margin for spacing */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Hover effect for the navbar brand (scaling the brand) */
+.navbar-brand:hover {
+    transform: scale(1.1);  /* Slightly enlarge the brand on hover */
+}
+
+/* Styling for the logo image */
+#logo-img {
+    padding-right: 20px;  /* Padding on the right of the logo image */
+    height: 54px;         /* Fixed height for the logo */
+    width: auto;          /* Automatically adjust width to maintain aspect ratio */
+}
+
+/* Styling for the logo text */
+#logo-text {
+    font-family: 'Charter BT Roman';  /* Custom font for logo text */
+    font-size: 46px;                   /* Font size for the logo text */
+    color: #9B0300;                    /* Dark red color for the logo text */
+}
+
+/* Styling for navigation items */
+.nav-item {
+    font-family: 'Pixelify Sans';  /* Font for navigation items */
+    font-size: 18px;               /* Font size for navigation items */
+    padding: 20px;                 /* Padding around the nav items */
+    cursor: pointer;              /* Pointer cursor for clickable items */
+    transition: transform 0.3s ease; /* Smooth hover effect */
+    display: inline-block;         /* Display items inline */
+    z-index: 5;
+}
+
+/* Styling for nav items in navbar-custom */
+.navbar-custom .navbar-brand,
+.navbar-custom .nav-link {
+    color: #070603;  /* Dark color for navbar links */
+}
+
+/* Transition effect for navigation links */
+.navbar-nav .nav-link {
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover effect for navigation links (scaling on hover) */
+.navbar-nav .nav-link:hover {
+    transform: scale(1.1); /* Enlarge links on hover */
+}
+
+/* Hover effect for navbar-custom links */
+.navbar-custom .nav-link:hover {
+    color: #9B0300;  /* Change color to dark red on hover */
+}
+
+/* Change the SVG icon when hovering on the join button */
+#joinBtn:hover #svgIcon {
+    content: url('join_us_button_2.svg'); /* Change to the new SVG icon */
+}
+
+/* Styling for the navbar-toggler button (hamburger menu) */
+.navbar-toggler {
+    border: none;             /* Remove the default border */
+    outline: none;            /* Remove the outline when focused */
+    background-color: transparent; /* Make the background transparent */
+    padding: 10px;            /* Padding around the toggler */
+    cursor: pointer;         /* Pointer cursor on hover */
+    position: relative;       /* Allow positioning of the button */
+}
+
+/* Make the icon inside navbar-toggler bigger and add a smooth transition */
+.navbar-toggler i {
+    font-size: 2rem;                          /* Initial size of the icon */
+    display: block;                           /* Display icon as a block */
+    transition: transform 0.3s ease, font-size 0.3s ease; /* Smooth transition for transform and font-size */
+}
+
+/* Rotate the icon to form an "X" when toggled */
+.navbar-toggler.open i {
+    transform: rotate(45deg); /* Rotate middle line to form an "X" */
+}
+
+/* Increase the size of the icon when toggler is open */
+.navbar-toggler.open i {
+    font-size: 2.5rem; /* Increase font size for the toggler icon */
+}
+
+
+
+body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
     }
 
-    /* Custom navbar with a yellow background */
-    .navbar-custom {
-        height: 100px;  /* Height of the navbar */
-        width: auto;    /* Auto width to fit content */
-        background-color: #FFCC00;  /* Background color */
-        z-index: 5;
-    }
-
-    /* Custom background for specific elements */
-    .custom-bg {
-        background-color: #FFCC00;  /* Background color for elements with .custom-bg */
-    }
-
-    /* Styling for the navbar brand */
-    .navbar-brand {
-        display: flex;             /* Flexbox to align items */
-        align-items: center;       /* Vertically center items */
-        margin-left: 20px;         /* Left margin for spacing */
-        transition: transform 0.3s ease; /* Smooth transition for hover effect */
-    }
-
-    /* Hover effect for the navbar brand (scaling the brand) */
-    .navbar-brand:hover {
-        transform: scale(1.1);  /* Slightly enlarge the brand on hover */
-    }
-
-    /* Styling for the logo image */
-    #logo-img {
-        padding-right: 20px;  /* Padding on the right of the logo image */
-        height: 54px;         /* Fixed height for the logo */
-        width: auto;          /* Automatically adjust width to maintain aspect ratio */
-    }
-
-    /* Styling for the logo text */
-    #logo-text {
-        font-family: 'Charter BT Roman';  /* Custom font for logo text */
-        font-size: 46px;                   /* Font size for the logo text */
-        color: #9B0300;                    /* Dark red color for the logo text */
-    }
-
-    /* Styling for navigation items */
-    .nav-item {
-        font-family: 'Pixelify Sans';  /* Font for navigation items */
-        font-size: 18px;               /* Font size for navigation items */
-        padding: 20px;                 /* Padding around the nav items */
-        cursor: pointer;              /* Pointer cursor for clickable items */
-        transition: transform 0.3s ease; /* Smooth hover effect */
-        display: inline-block;         /* Display items inline */
-    }
-
-    /* Styling for nav items in navbar-custom */
-    .navbar-custom .navbar-brand,
-    .navbar-custom .nav-link {
-        color: #070603;  /* Dark color for navbar links */
-    }
-
-    /* Transition effect for navigation links */
-    .navbar-nav .nav-link {
-        transition: transform 0.3s ease; /* Smooth hover effect */
-    }
-
-    /* Hover effect for navigation links (scaling on hover) */
-    .navbar-nav .nav-link:hover {
-        transform: scale(1.1); /* Enlarge links on hover */
-    }
-
-    /* Hover effect for navbar-custom links */
-    .navbar-custom .nav-link:hover {
-        color: #9B0300;  /* Change color to dark red on hover */
-    }
-
-    /* Change the SVG icon when hovering on the join button */
-    #joinBtn:hover #svgIcon {
-        content: url('join_us_button_2.svg'); /* Change to the new SVG icon */
-    }
-
-    /* Styling for the navbar-toggler button (hamburger menu) */
-    .navbar-toggler {
-        border: none;             /* Remove the default border */
-        outline: none;            /* Remove the outline when focused */
-        background-color: transparent; /* Make the background transparent */
-        padding: 10px;            /* Padding around the toggler */
-        cursor: pointer;         /* Pointer cursor on hover */
-        position: relative;       /* Allow positioning of the button */
-    }
-
-    /* Make the icon inside navbar-toggler bigger and add a smooth transition */
-    .navbar-toggler i {
-        font-size: 2rem;                          /* Initial size of the icon */
-        display: block;                           /* Display icon as a block */
-        transition: transform 0.3s ease, font-size 0.3s ease; /* Smooth transition for transform and font-size */
-    }
-
-    /* Rotate the icon to form an "X" when toggled */
-    .navbar-toggler.open i {
-        transform: rotate(45deg); /* Rotate middle line to form an "X" */
-    }
-
-    /* Increase the size of the icon when toggler is open */
-    .navbar-toggler.open i {
-        font-size: 2.5rem; /* Increase font size for the toggler icon */
-    }
 
     h1 {
       font-family: 'Pixelify Sans';
-      font-size: 70px;
+      font-size: 45px;
     }
 
     p {
      font-family: 'Pixelify Sans';
      font-size: 18px;
-     margin: 15px;
+     width: 90%;
      padding-bottom: 20px;
     }
 
@@ -166,7 +182,7 @@
     }
 
     .team-container h1 {
-      font-size: 70px;
+      font-size: 45px;
       font-weight: bold;
       color: #9B0300;
       text-align: center;
@@ -225,6 +241,11 @@
       padding-right: 50px;
       padding-top: 30px;
     }
+
+    @media (max-width: 990px) {
+    .navbar-collapse {
+    padding-bottom: 15px;
+  }}
 
     @media (min-width: 768px) {
       .team-container .row {
@@ -293,68 +314,75 @@
 
 <div class="container-fluid p-0">
 
-    <div class="row no-gutters">
-        <!-- Full-screen Image Section on Left -->
-        <div class="col-lg-6 p-0">
-          <div class="contact-img">
-            <img src="placeholder2.png" alt="Image 1" class="img-fluid custom-img">
-          </div>
-        </div>
-      
-        <!-- Text Section on Right with More Margin -->
-        <div class="col-lg-6 d-flex flex-column justify-content-center p-5">
-          <div class="d-flex align-items-center custom-column">            
-            <h1 class="text-left mb-4 me-3">WHO WE ARE</h1>
-            <p>We’re a group of manga fans from Southern California who love reading, sharing, and talking about manga. 
-                Whether you're new to manga or have been a fan for years, you'll feel at home here.
-                We enjoy discovering new series, giving recommendations, and discussing our favorite stories. 
-                We also plan fun outdoor events, meet-ups, and trips to conventions. Our goal is to create a 
-                friendly space where everyone can connect, learn, and have fun together!</p>
-          </div>
-        </div>
+  <div class="row no-gutters">
+    <!-- Full-screen Image Section on Left -->
+    <div class="col-lg-6 p-0">
+      <div class="contact-img">
+        <img src="placeholder2.png" alt="Image 1" class="img-fluid custom-img">
       </div>
-      
-      <div class="row no-gutters">
-        <!-- Text Section on Left with More Margin (for second row) -->
-        <div class="col-lg-6 d-flex flex-column justify-content-center p-5">
-          <div class="d-flex align-items-center custom-column">            
-            <h1 class="text-left mb-4 me-3">WHAT BUILT US</h1>
-            <p>We came together because of our shared love for manga and anime. 
-                What started as a small group of friends has grown into a welcoming community. 
-                Our club is built on friendship, respect, and fun, where everyone can share their 
-                love for manga and feel like family. We believe in creating a place where all fans 
-                can connect and enjoy the things they love.</p>
-          </div>
-        </div>
-      
-        <!-- Full-screen Image Section on Right -->
-        <div class="col-lg-6 p-0">
-          <div class="contact-img">
-            <img src="placeholder3.png" alt="Image 2" class="img-fluid custom-img">
-          </div>
-        </div>
+    </div>
+  
+    <!-- Text Section on Right with More Margin -->
+    <div class="col-lg-6 d-flex flex-column justify-content-center p-5">
+      <div class="d-flex flex-column custom-column">
+        <h1 class="text-left mb-4">WHO WE ARE</h1>
+        <p>
+          We’re a group of manga fans from Southern California who love reading, sharing, and talking about manga.
+          Whether you're new to manga or have been a fan for years, you'll feel at home here.
+          We enjoy discovering new series, giving recommendations, and discussing our favorite stories.
+          We also plan fun outdoor events, meet-ups, and trips to conventions. Our goal is to create a
+          friendly space where everyone can connect, learn, and have fun together!
+        </p>
       </div>
-      
-      <div class="row no-gutters">
-        <!-- Full-screen Image Section on Left -->
-        <div class="col-lg-6 p-0">
-          <div class="contact-img">
-            <img src="placeholder4.png" alt="Image 3" class="img-fluid custom-img">
-          </div>
-        </div>
-      
-        <!-- Text Section on Right with More Margin -->
-        <div class="col-lg-6 d-flex flex-column justify-content-center p-5">
-          <div class="d-flex align-items-center custom-column">            
-            <h1 class="text-left mb-4 me-3">WHAT WE VALUE</h1>
-            <p>We value friendship, respect, and welcoming everyone. 
-                No matter how much you know about manga, you’re always welcome here. 
-                We believe in creating a supportive space where people can share ideas, 
-                learn from each other, and enjoy manga together. Most importantly, 
-                we value having fun and making sure everyone feels at home.</p>
-          </div>
-        </div>
-      </div></div></div></div>
+    </div>
+  </div>
+  
+  <div class="row no-gutters">
+    <!-- Text Section on Left with More Margin (for second row) -->
+    <div class="col-lg-6 d-flex flex-column justify-content-center p-5">
+      <div class="d-flex flex-column custom-column">
+        <h1 class="text-left mb-4">WHAT BUILT US</h1>
+        <p>
+          We came together because of our shared love for manga and anime.
+          What started as a small group of friends has grown into a welcoming community.
+          Our club is built on friendship, respect, and fun, where everyone can share their
+          love for manga and feel like family. We believe in creating a place where all fans
+          can connect and enjoy the things they love.
+        </p>
+      </div>
+    </div>
+  
+    <!-- Full-screen Image Section on Right -->
+    <div class="col-lg-6 p-0">
+      <div class="contact-img">
+        <img src="placeholder3.png" alt="Image 2" class="img-fluid custom-img">
+      </div>
+    </div>
+  </div>
+  
+  <div class="row no-gutters">
+    <!-- Full-screen Image Section on Left -->
+    <div class="col-lg-6 p-0">
+      <div class="contact-img">
+        <img src="placeholder4.png" alt="Image 3" class="img-fluid custom-img">
+      </div>
+    </div>
+  
+    <!-- Text Section on Right with More Margin -->
+    <div class="col-lg-6 d-flex flex-column justify-content-center p-5">
+      <div class="d-flex flex-column custom-column">
+        <h1 class="text-left mb-4">WHAT WE VALUE</h1>
+        <p>
+          We value friendship, respect, and welcoming everyone.
+          No matter how much you know about manga, you’re always welcome here.
+          We believe in creating a supportive space where people can share ideas,
+          learn from each other, and enjoy manga together. Most importantly,
+          we value having fun and making sure everyone feels at home.
+        </p>
+      </div>
+    </div>
+  </div>
+  
     
 
 
@@ -443,63 +471,63 @@
     
     <script>
 
-        function toggleIcon(button) {
-            // Toggle the background color and text color of the button
-            const currentColor = button.style.backgroundColor;
+      function toggleIcon(button) {
+          // Toggle the background color and text color of the button
+          const currentColor = button.style.backgroundColor;
 
-            if (currentColor === 'transparent') { 
-                button.style.backgroundColor = 'transparent'; // Set background to transparent
-                button.style.color = '#070603'; // Reset color
-            } else {
-                button.style.backgroundColor = 'transparent'; // Set background to dark color
-                button.style.color = '#070603'; // Set color to white
-            }
+          if (currentColor === 'transparent') { 
+              button.style.backgroundColor = 'transparent'; // Set background to transparent
+              button.style.color = '#070603'; // Reset color
+          } else {
+              button.style.backgroundColor = 'transparent'; // Set background to dark color
+              button.style.color = '#070603'; // Set color to white
+          }
 
-            // Get the icon element inside the button
-            const icon = button.querySelector('i');
-            const isHamburger = icon.classList.contains('bi-list');
+          // Get the icon element inside the button
+          const icon = button.querySelector('i');
+          const isHamburger = icon.classList.contains('bi-list');
 
-            // Toggle the icon and apply animation via class
-            if (isHamburger) {
-                icon.classList.remove('bi-list');
-                icon.classList.add('bi-x'); // Switch to 'X' icon
-                icon.classList.add('rotate'); // Rotate the icon
-                icon.classList.add('grow'); // Increase icon size
-            } else {
-                icon.classList.remove('bi-x');
-                icon.classList.add('bi-list'); // Switch back to 'hamburger' icon
-                icon.classList.remove('rotate'); // Remove rotation
-                icon.classList.remove('grow'); // Reset icon size
-            }
-        }
+          // Toggle the icon and apply animation via class
+          if (isHamburger) {
+              icon.classList.remove('bi-list');
+              icon.classList.add('bi-x'); // Switch to 'X' icon
+              icon.classList.add('rotate'); // Rotate the icon
+              icon.classList.add('grow'); // Increase icon size
+          } else {
+              icon.classList.remove('bi-x');
+              icon.classList.add('bi-list'); // Switch back to 'hamburger' icon
+              icon.classList.remove('rotate'); // Remove rotation
+              icon.classList.remove('grow'); // Reset icon size
+          }
+      }
 
-        const button = document.getElementById('joinBtn');
-        const svgImage = document.getElementById('svgIcon');
+      const button = document.getElementById('joinBtn');
+      const svgImage = document.getElementById('svgIcon');
+    
+      // Event listener to change the SVG when the button is clicked or focused
+      button.addEventListener('focus', changeSVG);
+      button.addEventListener('click', changeSVG);
+    
+      // Event listener to reset the SVG when the button loses focus
+      button.addEventListener('blur', resetSVG);
+    
+      function changeSVG() {
+        svgImage.src = 'join_us_button_2.svg';  // Change to the new SVG (join_us_button_2.svg)
+      }
+    
+      function resetSVG() {
+        svgImage.src = 'join_us_button.svg';  // Reset to the original SVG (join_us_button.svg)
+      }
+
+      document.addEventListener('DOMContentLoaded', function () {
+      const toggler = document.querySelector('.navbar-toggler');
       
-        // Event listener to change the SVG when the button is clicked or focused
-        button.addEventListener('focus', changeSVG);
-        button.addEventListener('click', changeSVG);
-      
-        // Event listener to reset the SVG when the button loses focus
-        button.addEventListener('blur', resetSVG);
-      
-        function changeSVG() {
-          svgImage.src = 'join_us_button_2.svg';  // Change to the new SVG (join_us_button_2.svg)
-        }
-      
-        function resetSVG() {
-          svgImage.src = 'join_us_button.svg';  // Reset to the original SVG (join_us_button.svg)
-        }
-
-        document.addEventListener('DOMContentLoaded', function () {
-        const toggler = document.querySelector('.navbar-toggler');
-        
-        // Add event listener to toggle the collapsed class
-        toggler.addEventListener('click', function () {
-            toggler.classList.toggle('collapsed');  // This will toggle the "X" effect
-        });
-        });
-  </script>
+      // Add event listener to toggle the collapsed class
+      toggler.addEventListener('click', function () {
+          toggler.classList.toggle('collapsed');  // This will toggle the "X" effect
+      });
+      });
+</script>
 
 </body>
 </html>
