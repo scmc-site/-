@@ -152,6 +152,18 @@ body, html {
         height: 100%;
     }
 
+  /* If the image is a direct child of your navbar: */
+  .navbar img {
+    max-width: 100%;     /* never exceed its parent’s width */
+    height: auto;        /* preserve aspect ratio */
+    display: block;      /* remove any inline-image whitespace issues */
+  }
+
+  /* If it’s in a separate container, give that container a width or overflow rule: */
+  .img-wrapper {
+    width: 100%;         /* or a specific px/rem value */
+    overflow: hidden;    /* anything that tries to escape will get clipped */
+  }
 
     h1 {
       font-family: 'Pixelify Sans';
